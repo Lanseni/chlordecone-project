@@ -88,3 +88,10 @@ Git / GitHub
 ## Conclusion
 
 La contamination actuelle est structurellement liée aux pratiques agricoles passées et modulée par des facteurs environnementaux locaux. La combinaison de modèles explicatifs et prédictifs permet une approche robuste et opérationnelle du risque.
+
+
+## Online Version
+
+The full analysis notebook is available on Kaggle:
+
+ [Kaggle Notebook Link](https://www.kaggle.com/code/lascam/02-analysis-modeling)

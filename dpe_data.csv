@@ -1,0 +1,1096 @@
+<!doctype html>
+<html data-n-head-ssr lang="fr" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22fr%22%7D%7D">
+  <head >
+    <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"><meta data-n-head="ssr" name="twitter:card" content="summary"><meta data-n-head="ssr" property="og:locale" content="fr_FR"><meta data-n-head="ssr" data-hid="description" name="description" content="&lt;h3&gt;Le Diagnostic de Performance Energétique (DPE)&lt;/h3&gt;
+"><meta data-n-head="ssr" property="og:url" content="undefined"><meta data-n-head="ssr" data-hid="og:title" property="og:title" content="DPE Logements existants (depuis juillet 2021)"><meta data-n-head="ssr" property="og:description" content="&lt;h3&gt;Le Diagnostic de Performance Energétique (DPE)&lt;/h3&gt;
+"><meta data-n-head="ssr" property="og:type" content="article"><meta data-n-head="ssr" property="article:author" content="ADEME"><meta data-n-head="ssr" property="article:modified_time" content="2026-03-04T20:30:06.033Z"><meta data-n-head="ssr" property="article:published_time" content="2025-02-03T15:46:12.346Z"><meta data-n-head="ssr" data-hid="og:image" property="og:image" content="https://data.ademe.fr/data-fair/api/v1/applications/dpe-logements-existants-depuis-juillet-2021-etiquettes-dpe/capture"><meta data-n-head="ssr" data-hid="og:image:width" property="og:image:width" content="800"><meta data-n-head="ssr" data-hid="og:image:height" property="og:image:height" content="450"><title>DPE Logements existants (depuis juillet 2021)</title><base href="/"><link data-n-head="ssr" rel="canonical" href="https://data.ademe.fr/datasets/dpe03existant"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://data.ademe.fr/api/v1/portals/efWMeL1ZP/assets/favicon?draft=false&amp;hash=fit-d7749fd80a.png"><style data-n-head="ssr" vmid="config-style" type="text/css">
+html {
+  overflow-y: scroll !important;
+}
+
+.v-application#app.theme--light#app {
+  background: #FFFFFF;
+}
+
+.v-btn.primary.theme--light.v-btn--has-bg {
+  background: linear-gradient(90deg, #0d47a2 0%, #093273 100%);
+}
+
+/* TODO: the next 3 rules should be deprecated and replaced by explicit coloring of buttons in components (as done in nav-link component) */
+.v-application#app.theme--light .v-btn.primary.v-btn--has-bg {
+  border: 1px solid #093273 !important;
+}
+.v-btn.secondary.theme--light.v-btn--has-bg {
+  background-color: #1775c8 !important;
+}
+.v-btn.tertiary.theme--light.v-btn--has-bg {
+  background-color: #1775c8 !important;
+}
+
+/* Apply fonts */
+@font-face {
+    font-family: 'font1';
+    src: url('https://data.ademe.fr/api/v1/portals/efWMeL1ZP/assets/font1?draft=false&hash=eb551203b0') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('https://data.ademe.fr/api/v1/portals/efWMeL1ZP/assets/font2?draft=false&hash=f927ded015') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+    .v-application#app {
+    font-family: "font1" !important;
+    }
+    .v-application#app .text-subtitle-1, .v-application#app .text-subtitle-2, .v-application#app .text-body-1, .v-application#app .text-button, .v-application#app .text-caption, .v-application#app .text-overline  {
+    font-family: "font1" !important;
+    }
+    .v-application#app .text-h1, .v-application#app .text-h2, .v-application#app .text-h3, .v-application#app .text-h4, .v-application#app .text-h5, .v-application#app .text-h6 {
+    font-family: "font2" !important;
+    }
+
+    /* older typography classes */
+    .v-application#app .subheading, .v-application#app .body-2, .v-application#app .body-1, .v-application#app .button, .v-application#app .caption, .v-application#app .overline {
+    font-family: "font1" !important;
+    }
+    .v-application#app .display-4, .v-application#app .display-3, .v-application#app .display-2, .v-application#app .display-1, .v-application#app .headline, .v-application#app .title {
+    font-family: "font2" !important;
+    }
+      
+
+      .v-application#app a {
+        text-decoration: none;
+      }
+
+        p>a:not(.v-btn),
+        .underline-link {
+          display: inline-block;
+          position: relative;
+        }
+        p>a:not(.v-btn):after,
+        .underline-link:after {
+          content: '';
+          position: absolute;
+          width: 45px;
+          transform: scaleX(0);
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: #0d47a2;
+          transform-origin: bottom left;
+          transition: transform 0.25s ease-out;
+        }
+        .page-element a:hover:after,
+        p>a:hover:after,
+        .underline-link:hover:after,
+        .underline-link-hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+          background-color: #093273;
+        }
+        .underline-link.underline-link-partial:after {
+          transform: scaleX(1);
+        }
+        .underline-link.underline-link-partial:hover:after,
+        .underline-link-hover.underline-link-partial:after {
+          transform: scaleX(2);
+        }
+        
+
+/* some police tuning */
+.v-application#app a:not(.v-tab):not(.v-list-item):not(.v-card--link) {
+  color: #0d47a2;
+}
+.v-application#app a:not(.v-tab):not(.v-list-item):not(.v-card--link):hover {
+  color: #093273;
+}
+.v-application#app .area--dark a,
+.v-application#app .area--dark a:not(.v-tab):not(.v-list-item):not(.v-card--link),
+.v-application#app .area--dark a:not(.v-tab):not(.v-list-item):not(.v-card--link):hover,
+.v-application#app .area--dark h3,
+.v-application#app .area--dark span {
+  color: white;
+}
+.v-application#app .v-btn:not(.v-btn--outlined).primary,
+.v-application#app .v-btn:not(.v-btn--outlined).secondary,
+.v-application#app .v-btn:not(.v-btn--outlined).accent,
+.v-application#app .v-btn:not(.v-btn--outlined).success,
+.v-application#app .v-btn:not(.v-btn--outlined).error,
+.v-application#app .v-btn:not(.v-btn--outlined).warning,
+.v-application#app .v-btn:not(.v-btn--outlined).info {
+  color: white;
+}
+.v-application#app .theme--dark.v-list a {
+  color: white;
+}
+.v-application#app .area--light a:not(.v-tab):not(.v-list-item),
+.v-application#app .area--light h3,
+.v-application#app .area--light span,
+.v-application#app .area--light .v-tabs-bar.primary .v-tab--active {
+  color: #0d47a2!important;
+}
+.v-application#app .primary--text {
+  color: #0d47a2!important;
+}
+.v-application#app .primary-darker--text {
+  color: #093273!important;
+}
+.v-application#app .secondary--text {
+  color: #1775c8!important;
+}
+.v-application#app .tertiary--text {
+  color: #1775c8!important;
+}
+
+/* style of the main app bar */
+
+        .theme--light.v-app-bar.main-app-bar.v-toolbar.v-sheet {
+          background: rgba(255, 255, 255, 0.9);
+        }
+        
+
+/* style of the personal and partner navigation bars */
+
+      .v-application#app.theme--light.personal-space .navigation-left {
+        border-right: 1px solid #093273 !important;
+        background: linear-gradient(90deg, #093273 0%, #2660bb 100%);
+      }
+      
+
+      .v-application#app.theme--light.partner-space .navigation-left {
+        border-right: 1px solid #093273 !important;
+        background: linear-gradient(90deg, #093273 0%, #2660bb 100%);
+      }
+      
+
+/* default radius */
+.v-application#app .v-sheet.v-card,
+.v-application#app .v-text-field--outlined:not(.v-text-field--rounded),
+.v-application#app .v-text-field--solo:not(.v-text-field--rounded),
+.v-application#app .v-btn:not(.v-btn--rounded):not(.v-btn--text):not(.v-btn--fab):not(.v-btn--icon) {
+  border-radius: 4px;
+}
+.v-application#app .v-chip.v-chip--label {
+  border-radius: 4px !important;
+}
+.v-application#app .v-btn-toggle > .v-btn.v-btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.v-application#app .v-btn-toggle > .v-btn.v-btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.v-application#app .v-menu__content {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.v-application#app .v-sheet.v-card.v-sheet--shaped {
+  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.v-application#app .theme--light.v-sheet.primary-outlined {
+  border: 2px solid #0d47a2;
+}
+
+/* used to display descriptions in cards with bottom gradient */
+
+      .card-gradient-desc170 {
+        position: relative;
+      }
+      .card-gradient-desc170:before {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:170px;
+        left:0;
+        top:0;
+        background:linear-gradient(transparent 0, transparent 76%, #FFFFFF);
+      }
+      
+
+      .card-gradient-desc130 {
+        position: relative;
+      }
+      .card-gradient-desc130:before {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:130px;
+        left:0;
+        top:0;
+        background:linear-gradient(transparent 0, transparent 69%, #FFFFFF);
+      }
+      
+
+      .card-gradient-desc90 {
+        position: relative;
+      }
+      .card-gradient-desc90:before {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:90px;
+        left:0;
+        top:0;
+        background:linear-gradient(transparent 0, transparent 56%, #FFFFFF);
+      }
+      
+
+      .card-gradient-desc70 {
+        position: relative;
+      }
+      .card-gradient-desc70:before {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:70px;
+        left:0;
+        top:0;
+        background:linear-gradient(transparent 0, transparent 43%, #FAFAFA);
+      }
+      
+
+/* footer style */
+
+
+/* home page style */
+#app .nav-home-search input::placeholder {
+  color: #0d47a2;
+  font-weight: bold;
+}
+#app .nav-home-search .v-input__icon--append button {
+  color: #0d47a2;
+}
+        </style><style data-n-head="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #0d47a2; }
+.v-application .primary {
+  background-color: #0d47a2 !important;
+  border-color: #0d47a2 !important;
+}
+.v-application .primary--text {
+  color: #0d47a2 !important;
+  caret-color: #0d47a2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #b3c6ff !important;
+  border-color: #b3c6ff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #b3c6ff !important;
+  caret-color: #b3c6ff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #96abff !important;
+  border-color: #96abff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #96abff !important;
+  caret-color: #96abff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #7890f6 !important;
+  border-color: #7890f6 !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #7890f6 !important;
+  caret-color: #7890f6 !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #5b77da !important;
+  border-color: #5b77da !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #5b77da !important;
+  caret-color: #5b77da !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #3b5ebd !important;
+  border-color: #3b5ebd !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #3b5ebd !important;
+  caret-color: #3b5ebd !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #003187 !important;
+  border-color: #003187 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #003187 !important;
+  caret-color: #003187 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #001d6d !important;
+  border-color: #001d6d !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #001d6d !important;
+  caret-color: #001d6d !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #000454 !important;
+  border-color: #000454 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #000454 !important;
+  caret-color: #000454 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #00003d !important;
+  border-color: #00003d !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #00003d !important;
+  caret-color: #00003d !important;
+}
+.v-application .secondary {
+  background-color: #1e88e5 !important;
+  border-color: #1e88e5 !important;
+}
+.v-application .secondary--text {
+  color: #1e88e5 !important;
+  caret-color: #1e88e5 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #cfffff !important;
+  border-color: #cfffff !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #cfffff !important;
+  caret-color: #cfffff !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #b0f5ff !important;
+  border-color: #b0f5ff !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #b0f5ff !important;
+  caret-color: #b0f5ff !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #91d8ff !important;
+  border-color: #91d8ff !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #91d8ff !important;
+  caret-color: #91d8ff !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #70bdff !important;
+  border-color: #70bdff !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #70bdff !important;
+  caret-color: #70bdff !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #4da2ff !important;
+  border-color: #4da2ff !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #4da2ff !important;
+  caret-color: #4da2ff !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #006fc9 !important;
+  border-color: #006fc9 !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #006fc9 !important;
+  caret-color: #006fc9 !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #0057ad !important;
+  border-color: #0057ad !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #0057ad !important;
+  caret-color: #0057ad !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #004092 !important;
+  border-color: #004092 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #004092 !important;
+  caret-color: #004092 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #002b78 !important;
+  border-color: #002b78 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #002b78 !important;
+  caret-color: #002b78 !important;
+}
+.v-application .accent {
+  background-color: #ff9800 !important;
+  border-color: #ff9800 !important;
+}
+.v-application .accent--text {
+  color: #ff9800 !important;
+  caret-color: #ff9800 !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffa2 !important;
+  border-color: #ffffa2 !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffa2 !important;
+  caret-color: #ffffa2 !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #ffff85 !important;
+  border-color: #ffff85 !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #ffff85 !important;
+  caret-color: #ffff85 !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #ffeb69 !important;
+  border-color: #ffeb69 !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #ffeb69 !important;
+  caret-color: #ffeb69 !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #ffcf4d !important;
+  border-color: #ffcf4d !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #ffcf4d !important;
+  caret-color: #ffcf4d !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #ffb32f !important;
+  border-color: #ffb32f !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #ffb32f !important;
+  caret-color: #ffb32f !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #df7e00 !important;
+  border-color: #df7e00 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #df7e00 !important;
+  caret-color: #df7e00 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #bf6400 !important;
+  border-color: #bf6400 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #bf6400 !important;
+  caret-color: #bf6400 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #a14c00 !important;
+  border-color: #a14c00 !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #a14c00 !important;
+  caret-color: #a14c00 !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #843300 !important;
+  border-color: #843300 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #843300 !important;
+  caret-color: #843300 !important;
+}
+.v-application .error {
+  background-color: #d50000 !important;
+  border-color: #d50000 !important;
+}
+.v-application .error--text {
+  color: #d50000 !important;
+  caret-color: #d50000 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffb082 !important;
+  border-color: #ffb082 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffb082 !important;
+  caret-color: #ffb082 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ff9268 !important;
+  border-color: #ff9268 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ff9268 !important;
+  caret-color: #ff9268 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ff754e !important;
+  border-color: #ff754e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ff754e !important;
+  caret-color: #ff754e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff5736 !important;
+  border-color: #ff5736 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff5736 !important;
+  caret-color: #ff5736 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #f6361d !important;
+  border-color: #f6361d !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #f6361d !important;
+  caret-color: #f6361d !important;
+}
+.v-application .error.darken-1 {
+  background-color: #b40000 !important;
+  border-color: #b40000 !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #b40000 !important;
+  caret-color: #b40000 !important;
+}
+.v-application .error.darken-2 {
+  background-color: #950000 !important;
+  border-color: #950000 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #950000 !important;
+  caret-color: #950000 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #770000 !important;
+  border-color: #770000 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #770000 !important;
+  caret-color: #770000 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #5c0000 !important;
+  border-color: #5c0000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #5c0000 !important;
+  caret-color: #5c0000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+}
+.v-application .success--text {
+  color: #2e7d32 !important;
+  caret-color: #2e7d32 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #b8ffb2 !important;
+  border-color: #b8ffb2 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #b8ffb2 !important;
+  caret-color: #b8ffb2 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #9ceb97 !important;
+  border-color: #9ceb97 !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #9ceb97 !important;
+  caret-color: #9ceb97 !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #80ce7c !important;
+  border-color: #80ce7c !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #80ce7c !important;
+  caret-color: #80ce7c !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #65b263 !important;
+  border-color: #65b263 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #65b263 !important;
+  caret-color: #65b263 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #4a974a !important;
+  border-color: #4a974a !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #4a974a !important;
+  caret-color: #4a974a !important;
+}
+.v-application .success.darken-1 {
+  background-color: #0a631a !important;
+  border-color: #0a631a !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #0a631a !important;
+  caret-color: #0a631a !important;
+}
+.v-application .success.darken-2 {
+  background-color: #004b01 !important;
+  border-color: #004b01 !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #004b01 !important;
+  caret-color: #004b01 !important;
+}
+.v-application .success.darken-3 {
+  background-color: #003300 !important;
+  border-color: #003300 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #003300 !important;
+  caret-color: #003300 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #002100 !important;
+  border-color: #002100 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #002100 !important;
+  caret-color: #002100 !important;
+}
+.v-application .warning {
+  background-color: #d81b60 !important;
+  border-color: #d81b60 !important;
+}
+.v-application .warning--text {
+  color: #d81b60 !important;
+  caret-color: #d81b60 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffbbe4 !important;
+  border-color: #ffbbe4 !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffbbe4 !important;
+  caret-color: #ffbbe4 !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #ff9dc8 !important;
+  border-color: #ff9dc8 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #ff9dc8 !important;
+  caret-color: #ff9dc8 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ff80ad !important;
+  border-color: #ff80ad !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ff80ad !important;
+  caret-color: #ff80ad !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ff6292 !important;
+  border-color: #ff6292 !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ff6292 !important;
+  caret-color: #ff6292 !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #f74379 !important;
+  border-color: #f74379 !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #f74379 !important;
+  caret-color: #f74379 !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #b90049 !important;
+  border-color: #b90049 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #b90049 !important;
+  caret-color: #b90049 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #9a0032 !important;
+  border-color: #9a0032 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #9a0032 !important;
+  caret-color: #9a0032 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #7b001e !important;
+  border-color: #7b001e !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #7b001e !important;
+  caret-color: #7b001e !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #5e0004 !important;
+  border-color: #5e0004 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #5e0004 !important;
+  caret-color: #5e0004 !important;
+}
+.v-application .admin {
+  background-color: #b71c1c !important;
+  border-color: #b71c1c !important;
+}
+.v-application .admin--text {
+  color: #b71c1c !important;
+  caret-color: #b71c1c !important;
+}
+.v-application .admin.lighten-5 {
+  background-color: #ffaf95 !important;
+  border-color: #ffaf95 !important;
+}
+.v-application .admin--text.text--lighten-5 {
+  color: #ffaf95 !important;
+  caret-color: #ffaf95 !important;
+}
+.v-application .admin.lighten-4 {
+  background-color: #ff937b !important;
+  border-color: #ff937b !important;
+}
+.v-application .admin--text.text--lighten-4 {
+  color: #ff937b !important;
+  caret-color: #ff937b !important;
+}
+.v-application .admin.lighten-3 {
+  background-color: #ff7762 !important;
+  border-color: #ff7762 !important;
+}
+.v-application .admin--text.text--lighten-3 {
+  color: #ff7762 !important;
+  caret-color: #ff7762 !important;
+}
+.v-application .admin.lighten-2 {
+  background-color: #f75b4a !important;
+  border-color: #f75b4a !important;
+}
+.v-application .admin--text.text--lighten-2 {
+  color: #f75b4a !important;
+  caret-color: #f75b4a !important;
+}
+.v-application .admin.lighten-1 {
+  background-color: #d73e32 !important;
+  border-color: #d73e32 !important;
+}
+.v-application .admin--text.text--lighten-1 {
+  color: #d73e32 !important;
+  caret-color: #d73e32 !important;
+}
+.v-application .admin.darken-1 {
+  background-color: #980005 !important;
+  border-color: #980005 !important;
+}
+.v-application .admin--text.text--darken-1 {
+  color: #980005 !important;
+  caret-color: #980005 !important;
+}
+.v-application .admin.darken-2 {
+  background-color: #7a0000 !important;
+  border-color: #7a0000 !important;
+}
+.v-application .admin--text.text--darken-2 {
+  color: #7a0000 !important;
+  caret-color: #7a0000 !important;
+}
+.v-application .admin.darken-3 {
+  background-color: #5e0000 !important;
+  border-color: #5e0000 !important;
+}
+.v-application .admin--text.text--darken-3 {
+  color: #5e0000 !important;
+  caret-color: #5e0000 !important;
+}
+.v-application .admin.darken-4 {
+  background-color: #480000 !important;
+  border-color: #480000 !important;
+}
+.v-application .admin--text.text--darken-4 {
+  color: #480000 !important;
+  caret-color: #480000 !important;
+}
+.v-application .tertiary {
+  background-color: #1e88e5 !important;
+  border-color: #1e88e5 !important;
+}
+.v-application .tertiary--text {
+  color: #1e88e5 !important;
+  caret-color: #1e88e5 !important;
+}
+.v-application .tertiary.lighten-5 {
+  background-color: #cfffff !important;
+  border-color: #cfffff !important;
+}
+.v-application .tertiary--text.text--lighten-5 {
+  color: #cfffff !important;
+  caret-color: #cfffff !important;
+}
+.v-application .tertiary.lighten-4 {
+  background-color: #b0f5ff !important;
+  border-color: #b0f5ff !important;
+}
+.v-application .tertiary--text.text--lighten-4 {
+  color: #b0f5ff !important;
+  caret-color: #b0f5ff !important;
+}
+.v-application .tertiary.lighten-3 {
+  background-color: #91d8ff !important;
+  border-color: #91d8ff !important;
+}
+.v-application .tertiary--text.text--lighten-3 {
+  color: #91d8ff !important;
+  caret-color: #91d8ff !important;
+}
+.v-application .tertiary.lighten-2 {
+  background-color: #70bdff !important;
+  border-color: #70bdff !important;
+}
+.v-application .tertiary--text.text--lighten-2 {
+  color: #70bdff !important;
+  caret-color: #70bdff !important;
+}
+.v-application .tertiary.lighten-1 {
+  background-color: #4da2ff !important;
+  border-color: #4da2ff !important;
+}
+.v-application .tertiary--text.text--lighten-1 {
+  color: #4da2ff !important;
+  caret-color: #4da2ff !important;
+}
+.v-application .tertiary.darken-1 {
+  background-color: #006fc9 !important;
+  border-color: #006fc9 !important;
+}
+.v-application .tertiary--text.text--darken-1 {
+  color: #006fc9 !important;
+  caret-color: #006fc9 !important;
+}
+.v-application .tertiary.darken-2 {
+  background-color: #0057ad !important;
+  border-color: #0057ad !important;
+}
+.v-application .tertiary--text.text--darken-2 {
+  color: #0057ad !important;
+  caret-color: #0057ad !important;
+}
+.v-application .tertiary.darken-3 {
+  background-color: #004092 !important;
+  border-color: #004092 !important;
+}
+.v-application .tertiary--text.text--darken-3 {
+  color: #004092 !important;
+  caret-color: #004092 !important;
+}
+.v-application .tertiary.darken-4 {
+  background-color: #002b78 !important;
+  border-color: #002b78 !important;
+}
+.v-application .tertiary--text.text--darken-4 {
+  color: #002b78 !important;
+  caret-color: #002b78 !important;
+}</style><script data-n-head="ssr" data-hid="schema" type="application/ld+json">{"@context":"http://schema.org","@type":"Dataset","name":"DPE Logements existants (depuis juillet 2021)","description":"<h3>Le Diagnostic de Performance Energétique (DPE)</h3>\n","author":{"@type":"Organization","name":"ADEME"},"creator":{"@type":"Organization","name":"ADEME"},"dateCreated":"2025-02-03T15:46:12.346Z","dateModified":"2026-03-04T20:30:06.033Z","sdPublisher":{"@context":"http://schema.org","@type":"Organization","name":"Koumoul","legalName":"Koumoul","url":"https://koumoul.com/","logo":"https://koumoul.com/assets/koumoul.png","foundingDate":"2017","founders":[{"@type":"Person","name":"Nicolas Bonnel","email":"nicolas.bonnel@koumoul.com","sameAs":["https://github.com/nicolas-bonnel","https://fr.linkedin.com/in/nicolas-bonnel-557a54131"]},{"@type":"Person","name":"Alban Mouton","email":"alban.mouton@koumoul.com","sameAs":["https://github.com/albanm","https://fr.linkedin.com/in/alban-mouton-56802a132"]}],"address":{"@type":"PostalAddress","streetAddress":"5, rue Joseph Le Brix","addressLocality":"Vannes","postalCode":"56000","addressCountry":"France"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","url":"https://koumoul.com/contact","email":"contact@koumoul.com","availableLanguage":["English","French"]},{"@type":"ContactPoint","contactType":"technical support","email":"support@koumoul.com","url":"https://koumoul.com/contact","availableLanguage":["English","French"]}],"sameAs":["https://plus.google.com/108675070247986361976","https://twitter.com/Koumoul_fr","https://gitlab.com/koumoul","https://github.com/data-fair","http://codepen.io/koumoul/","http://www.data.gouv.fr/fr/organizations/koumoul-1/","https://www.facebook.com/Koumoul-868835219926301","https://hub.docker.com/u/koumoul/"]},"sdDatePublished":"2025-02-03T15:46:12.346Z","encodingFormat":"application/json","citation":"ADEME","spatialCoverage":{"@type":"Place","geo":{"@type":"GeoShape","box":"-5.131043046712875,-5.983856348320842 9.556231945753098,64.04822062700987"}},"license":"https://www.etalab.gouv.fr/licence-ouverte-open-licence","image":{"@type":"imageObject","url":"https://data.ademe.fr/data-fair/api/v1/applications/dpe-logements-existants-depuis-juillet-2021-etiquettes-dpe/capture"},"thumbnailUrl":"https://data.ademe.fr/data-fair/api/v1/applications/dpe-logements-existants-depuis-juillet-2021-etiquettes-dpe/capture"}</script><link rel="preload" href="/_nuxt/dfff57f4-5f684ed.js" as="script"><link rel="preload" href="/_nuxt/3bd87d5.js" as="script"><link rel="preload" href="/_nuxt/css/0e1f36c.css" as="style"><link rel="preload" href="/_nuxt/0515138.js" as="script"><link rel="preload" href="/_nuxt/css/704d84b.css" as="style"><link rel="preload" href="/_nuxt/dfff57f4-1ff6dc0.js" as="script"><link rel="preload" href="/_nuxt/css/0372ad1.css" as="style"><link rel="preload" href="/_nuxt/dfff57f4-cd1be1c.js" as="script"><link rel="preload" href="/_nuxt/css/47903a7.css" as="style"><link rel="preload" href="/_nuxt/1a9b5bc.js" as="script"><link rel="preload" href="/_nuxt/css/ae59b58.css" as="style"><link rel="preload" href="/_nuxt/2a67dbe.js" as="script"><link rel="preload" href="/_nuxt/css/632dc66.css" as="style"><link rel="preload" href="/_nuxt/0601ae9.js" as="script"><link rel="preload" href="/_nuxt/css/4180938.css" as="style"><link rel="preload" href="/_nuxt/513efd3.js" as="script"><link rel="preload" href="/_nuxt/css/dd2cb3e.css" as="style"><link rel="preload" href="/_nuxt/dfff57f4-1763db0.js" as="script"><link rel="stylesheet" href="/_nuxt/css/0e1f36c.css"><link rel="stylesheet" href="/_nuxt/css/704d84b.css"><link rel="stylesheet" href="/_nuxt/css/0372ad1.css"><link rel="stylesheet" href="/_nuxt/css/47903a7.css"><link rel="stylesheet" href="/_nuxt/css/ae59b58.css"><link rel="stylesheet" href="/_nuxt/css/632dc66.css"><link rel="stylesheet" href="/_nuxt/css/4180938.css"><link rel="stylesheet" href="/_nuxt/css/dd2cb3e.css">
+  </head>
+  <body >
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><!----> <header data-fetch-key="0" class="v-sheet theme--light elevation-6 v-toolbar v-toolbar--extended v-app-bar v-app-bar--fixed main-app-bar mb-3 app-bar-xs area--light app-bar-fluid" style="height:65px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;max-height:192px;"><div class="v-toolbar__content" style="height:1px;"></div><div class="v-toolbar__extension" style="height:64px;"><div style="float:left;"><a href="https://www.ademe.fr/" target="blank" class="mr-3" style="height:56px;display:block;"><img src="https://data.ademe.fr/api/v1/portals/efWMeL1ZP/assets/logo?draft=false&amp;hash=fit-2e58cae358.png" alt="Portail open data de l'ADEME" style="max-height:56px;max-width:0px;"></a></div> <div class="row nav-tabs-or-menu mx-0" style="overflow:hidden;"><div class="v-menu" data-v-c6f29c1c><button type="button" title="Menu de navigation" class="font-weight-bold v-btn v-btn--text v-btn--tile theme--light v-size--default" style="height:64px;" data-v-c6f29c1c><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mx-1 mdi mdi-menu theme--light" data-v-c6f29c1c></i> <!----></span></button><!----></div> <div class="v-tabs v-tabs--centered theme--light" style="display:none;"><div role="tablist" class="v-item-group theme--light v-slide-group v-tabs-bar v-tabs-bar--is-mobile primary--text transparent" style="height:64px;"><div class="v-slide-group__prev v-slide-group__prev--disabled"><!----></div><div class="v-slide-group__wrapper"><div class="v-slide-group__content v-tabs-bar__content"><div class="v-tabs-slider-wrapper" style="transition:none;"><div class="v-tabs-slider"></div></div> <a href="/" tabindex="0" aria-selected="false" role="tab" class="v-tab font-weight-bold grey--text text--darken-3">
+      Accueil
+    </a> <!----><a href="/datasets" aria-current="page" tabindex="0" aria-selected="false" role="tab" class="v-tab--active v-tab font-weight-bold grey--text text--darken-3">
+      Données
+    </a> <!----><a href="/applications" tabindex="0" aria-selected="false" role="tab" class="v-tab font-weight-bold grey--text text--darken-3">
+      Visualisations
+    </a> <!----><a href="/pages/dpe" tabindex="0" aria-selected="false" role="tab" class="v-tab font-weight-bold grey--text text--darken-3">
+      Info DPE
+    </a> <!----><a href="/pages/faq" tabindex="0" aria-selected="false" role="tab" class="v-tab font-weight-bold grey--text text--darken-3">
+      FAQ
+    </a> <!----><a href="/contact" tabindex="0" aria-selected="false" role="tab" class="v-tab font-weight-bold grey--text text--darken-3">
+      Contact
+    </a> <!----></div></div><div class="v-slide-group__next v-slide-group__next--disabled"><!----></div></div></div></div> <div class="v-toolbar__items"><!----> <!----></div></div></header> <main class="v-main mt-3" style="padding-top:1px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-main__wrap"><!----> <div data-fetch-key="1"><div class="container"><h1 class="text-h5 grey--text text--darken-3 my-4">DPE Logements existants (depuis juillet 2021)</h1> <div class="row"><div class="col-md-7 col-12"><!----> <div><h3>Le Diagnostic de Performance Energétique (DPE)</h3>
+<p></p>
+Le Diagnostic de Performance Energétique (DPE) renseigne sur la performance énergétique et environnementale d’un logement ou d’un bâtiment, en évaluant sa **consommation d’énergie** et son impact en matière d’**émissions de gaz à effet de serre**. Le contenu et les modalités d’établissement du DPE sont réglementés. Le DPE contient des informations sur les caractéristiques du bâtiment ou du logement (surface, orientation, murs, fenêtres, matériaux, etc.) ainsi que sur ses équipements (de chauffage, de production d’eau chaude sanitaire, de ventilation, etc.)
+
+<p>Pour les logements, le DPE a fait l’objet d’une réforme entrée en vigueur le 1er juillet 2021. Son objectif est de fiabiliser le DPE afin d’en faire le dispositif central dans la réglementation liée à la rénovation énergétique. </p>
+<p>Les principales évolutions sont :</p>
+<ul>
+<li>Généralisation de la méthode de calcul (3CL) à tous les logements </li>
+<li>Passage de 3 à 5 usages énergétiques (ajout des consommations d’éclairage et d’auxiliaire)</li>
+<li>Intégration d’un double-seuil prenant en compte les émissions de gaz à effet de serre dans l’étiquette DPE.</li>
+</ul>
+<p> <img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2jK8JaUieA84hk2TJR3v%2Fuploads%2FgSaolsvN9LI2Z2KhgVn2%2FClasses%20DPE%20small.jpg?alt=media&amp;token=2b7c9286-a147-4b8d-aef8-008f8d15627b" alt="" /></p>
+<h3>La collecte des DPE par l’Ademe</h3>
+<p>L’Ademe effectue la collecte des DPE depuis 2013 (<a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000024317077/">Décret no 2011-807 du 5 juillet 2011 relatif à la transmission des DPE à l’ADEME</a>). Dans le cadre de la réforme en vigueur depuis le 1er juillet 2021,l’Ademe a de nouveau été identifié comme responsable de la collecte des DPE (<a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000043353381/2022-03-17/">Article 4 de l’arrêté du 31 mars 2021 relatif aux méthodes et procédures applicables au diagnostic de performance énergétique</a>). Compte tenu de la nature des évolutions, un nouveau modèle de données a été établi.</p>
+<p>Pour plus d’informations sur le DPE, nous vous invitons à consulter le nouvel observatoire DPE à l’adresse suivante : <a href="https://observatoire-dpe-audit.ademe.fr/accueil">https://observatoire-dpe-audit.ademe.fr/accueil</a>.</p>
+<p>Vous y retrouverez diverses fonctionnalités dont :</p>
+<ul>
+<li>Un outil statistique permettant d’obtenir des données générales sur les DPE, complémentaires à celles présentées ici </li>
+<li>Un accès à la vue tabulaire des données en Open data via votre espace personnel.</li>
+<li>Une FAQ</li>
+</ul>
+<p></p>
+
+<h3>Les outils à votre disposition</h3>
+<p>Les données à disposition ici concernent les <strong>DPE établis à partir du 1er juillet 2021 sur des logements existants</strong>.</p>
+<p>Les données des DPE établis avant le 1er juillet 2021 se trouvent dans les jeux de données « <a href="https://data.ademe.fr/datasets/dpe-tertiaire">Diagnostics de performance énergétique pour les bâtiments tertiaire</a> » et « <a href="https://data.ademe.fr/datasets/dpe-france">Diagnostics de performance énergétique pour les logements par habitation</a> ».</p>
+<p>Sur cette page, vous pouvez accéder aux données sous des formats différents. Chaque format est destiné à un usage.</p>
+<p>En complément, une documentation d’utilisation des différentes fonctionnalités accessibles depuis cette page (API, vue tabulaire, etc.) est disponible <a href="https://data-fair.github.io/3/user-guide-frontoffice/datasetpage/">ici</a>.</p>
+<p>Si vous ne souhaitez pas accéder à l’ensemble des données, nous vous conseillons d’utiliser la vue tabulaire en cliquant sur le symbole <img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2jK8JaUieA84hk2TJR3v%2Fuploads%2FN7NuxhDKztBACmPKIqu0%2FVue%20tabulaire%202%20-%20small.jpg?alt=media&amp;token=dafdde89-d2e0-40e5-8a85-a3708e70528e" alt="" />. Cette vue vous permet d’une part d’appliquer des filtres pour sélectionner les DPE à afficher et d’autre part de choisir les colonnes que vous souhaitez afficher. Vous pouvez ensuite extraire ces données sous divers formats dont le format Excel. </p>
+<p><strong>Pour les publics avertis, nous proposons</strong> : </p>
+<ul>
+<li><a href="https://opendata.ademe.fr/dump_dpev2_prod_fdld.sql.gz">Un accès en téléchargement aux données sous forme d’une base de données</a> (<em><strong>attention à la taille de la base de données - Autorisez votre navigateur à télécharger depuis un site non sécurisé</strong></em>). PostgreSQL 12.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39), 64-bit.</li>
+<li>Un accès par API, disponible dans la zone de pictogrammes à droite de l’écran. <a href="https://www.loom.com/share/411a6993752f407fb1e30b0552e1ccd3">Voir la vidéo démo d’utilisation de l’API</a>.</li>
+</ul>
+<h3>Documents d’accompagnements</h3>
+<p>Pour vous aider à l’exploitation des données DPE, vous trouverez dans les pièces jointes disponibles en cliquant sur le symbole  <img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2jK8JaUieA84hk2TJR3v%2Fuploads%2FNxZEaVUwQQtYwwLINuty%2FPi%C3%A8ce%20jointe%20-%20small.jpg?alt=media&amp;token=c0488667-5d48-4a5e-a434-3033a80577a0" alt="" /> différents documents d’accompagnement :</p>
+<ul>
+<li>Un dictionnaire de données précisant à quoi correspond chaque champ </li>
+<li>Une note technique précisant les informations essentielles à connaître afin d’interpréter correctement les données fournies. </li>
+<li>Une description des contrôles de cohérence effectuées sur les données des DPE</li>
+</ul>
+<p>
+
+</p><p>A destination des utilisateurs de la base de données :</p>
+<ul>
+<li>Un dictionnaire de données plus technique </li>
+<li>Les tables de valeurs et d’énumérateurs utilisées dans la base de données.</li>
+<li>Le modèle de données.</li>
+</ul>
+<p></p><p>
+
+</p><h3>Précautions d’interprétation des données</h3>
+<p>Attention : les données fournies ici sont les données brutes de l’observatoire DPE qui contient l’ensemble des DPE effectués par les diagnostiqueurs immobiliers. </p>
+<p>Leur interprétation doit être faite avec précaution. En effet, le DPE est obligatoire seulement pour une vente, une location ou à l'achèvement de toute nouvelle construction. Ainsi, tous les biens ne sont pas dotés d'un DPE. A ce titre, la base de données DPE ne couvre pas l'ensemble du parc immobilier et elle n’en est pas représentative. </p>
+<p>Pour estimer la performance énergétique et environnementale de l'ensemble du parc français et la distribution nationale des classes DPE, un travail de redressement des données doit être fait. Il nécessite l’utilisation de la base de données DPE mais aussi l’utilisation d’autres bases de données comme par exemple, le répertoire de logements de l'Insee « Fidéli » ou encore les distributions d'énergies principales de chauffage des résidences principales estimées par le recensement de la population.</p>
+<h3>Autres informations sur les données fournies</h3>
+<ul>
+<li>Les données mises à disposition sont les données brutes saisies par les diagnostiqueurs. L’Ademe n’effectue aucune reprise de données. Dans ce cadre, l’ADEME ne peut en aucun cas être tenue responsable de la qualité des données qui lui sont transmises.</li>
+<li>Contrairement aux données envoyées sur l’ancien observatoire, les données font désormais l’objet de contrôles de cohérence. En cas de non-conformité, le DPE est rejeté si le contrôle est bloquant. Pour plus d’informations, nous vous invitons à consulter le document en pièce jointe décrivant les contrôles de cohérence en vigueur<p></p></li>
+</ul></div></div> <div class="col-md-4 offset-md-1 col-12"><div class="py-3 v-card v-sheet theme--light elevation-0" style="background-color:#FAFAFA;"><div class="row"><div class="py-0 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light" style="min-height:36px;"><div class="v-list-item__content"><div class="v-list-item__title"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Taille :
+                    </div>
+                    14 220 911 enregistrements
+                    <!----></div></div></div></div> <div class="py-0 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light"><div class="v-list-item__content"><div class="v-list-item__title"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Données produites par :
+                    </div> <strong>ADEME</strong></div></div></div></div> <!----> <div class="py-0 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light"><div class="v-list-item__content"><div class="v-list-item__title"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Licence :
+                    </div> <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence" rel="external" class="underline-link">Licence Ouverte / Open Licence version 2.0</a></div></div></div></div> <div class="py-0 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light"><div class="v-list-item__content"><div class="v-list-item__title" style="white-space:normal;"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Mots clés :
+                    </div> <span draggable="false" class="ma-1 v-chip theme--dark v-size--small" style="background-color:#1775c8;border-color:#1775c8;"><span class="v-chip__content">
+                      DPE
+                    </span></span></div></div></div></div> <div class="py-0 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light"><div class="v-list-item__content"><div class="v-list-item__title" style="white-space:normal;"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Couverture géographique :
+                    </div>
+                    France entière
+                  </div></div></div></div> <!----> <div class="py-0 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light"><div class="v-list-item__content"><div class="v-list-item__title" style="white-space:normal;"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Fréquence de mise à jour :
+                    </div>
+                    chaque semaine
+                  </div></div></div></div></div> <hr role="separator" aria-orientation="horizontal" class="mt-2 mb-3 v-divider theme--light"> <div class="row ma-0 align-center"><div class="px-5 py-1 col-md-12 col-12"><div class="row"><div class="pa-0 col col-auto"><div class="v-dialog__container"><button type="button" aria-label="Aperçu du tableau" title="Aperçu du tableau" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-table-eye theme--light primary--text"></i></span></button><!----></div></div> <div class="pa-0 col col-auto"><a href="/datasets/dpe03existant/full" aria-label="Tableau plein écran" title="Tableau plein écran" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round v-btn--router theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-table-large theme--light primary--text"></i></span></a></div> <div class="pa-0 col col-auto"><div class="v-dialog__container"><button type="button" aria-label="Carte générique" title="Carte générique" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-map-marker theme--light primary--text"></i></span></button><!----></div></div> <div class="pa-0 col col-auto"><a href="/datasets/dpe03existant/api-doc" aria-label="Documentation d'API" title="Documentation d'API" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round v-btn--router theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-cog theme--light primary--text"></i></span></a></div> <div class="pa-0 col col-auto"><div class="v-dialog__container"><button type="button" aria-label="Téléchargement des données" title="Téléchargement des données" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-download theme--light primary--text"></i></span></button><!----></div></div> <div class="pa-0 col col-auto"><div class="v-dialog__container"><button type="button" aria-label="Description des champs" title="Description des champs" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-view-list theme--light primary--text"></i></span></button><!----></div></div> <div class="pa-0 col col-auto"><div class="v-dialog__container"><button type="button" aria-label="Intégrer dans un site" title="Intégrer dans un site" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-code-tags theme--light primary--text"></i></span></button><!----></div></div> <div class="pa-0 col col-auto"><div class="v-dialog__container"><button type="button" aria-label="Pièces jointes" title="Pièces jointes" class="action-icon ml-0 v-btn v-btn--fab v-btn--has-bg v-btn--round theme--light elevation-0 v-size--small transparent pa-0" style="width:32px;height:32px;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-attachment theme--light primary--text"></i></span></button><!----></div></div> <div class="pa-0 col col-auto"><!----></div></div></div> <div class="py-1 col-md-12 col-12"><div tabindex="-1" class="v-list-item theme--light" style="min-height:36px;"><div class="v-list-item__content py-1"><div class="v-list-item__title" style="white-space:normal;"><div class="v-subheader pa-0 theme--light" style="height:26px;">
+                      Mis à jour le 4 mars 2026
+                    </div></div></div></div></div> <div class="py-1 col-md-12 col-12"><div class="row ma-0 align-center"><div class="v-subheader theme--light" style="height:26px;">
+                  Partager :
+                </div> <div class="share-network"><!----><!----><!----><!----><!----></div></div></div></div></div></div></div> <div class="row my-3 align-center"><div class="px-5 py-3 col-md-6 order-md-1 col-12"><a href="/applications/dpe-logements-existants-depuis-juillet-2021-etiquettes-dpe" class="title"><span class="underline-link">DPE Logements existants (depuis juillet 2021) - Etiquettes DPE</span> <i aria-hidden="true" class="v-icon notranslate mdi mdi-open-in-new theme--light primary--text"></i></a> <div class="mt-3"><p>Cette carte présente les DPE des logements existants, <strong>depuis le 1er juillet 2021</strong>, en fonction de leur classe énergétique.</p>
+<p><strong>AVERTISSEMENT</strong> : les diagnostics de performance énergétique (DPE) sont transmis à l’ADEME à des fins d'études statistiques, d'évaluation et d'amélioration méthodologique en vertu de l’article L134-4-2 du code de la construction et de l’habitation.
+Dans ce cadre, l’ADEME ne peut en aucun cas être tenue responsable de la qualité des données qui lui sont transmises sous la seule responsabilité du diagnostiqueur. </p><p></p><p></p></div></div> <div class="col-md-6 order-md-0 col-12 order-1"><!----></div></div> <!----> <!----> <!----> <div class="row my-4 text-center"><div class="col col-12"><a href="/datasets" class="nuxt-link-active title primary--text"><i aria-hidden="true" class="v-icon notranslate mdi mdi-reply theme--light primary--text"></i>
+   <span class="underline-link">retourner à la liste</span></a></div></div></div></div> <!----></div></main> <button type="button" title="Remonter au début de la page" aria-label="Remonter au début de la page" class="transition-swing v-btn v-btn--bottom v-btn--is-elevated v-btn--fab v-btn--fixed v-btn--has-bg v-btn--right v-btn--round theme--light v-size--large primary" style="display:none;z-index:6;"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-up theme--light"></i></span></button> <!----> <footer class="v-footer v-sheet theme--light main-footer pa-0 area--light mt-5"><div class="v-card v-sheet theme--light rounded-0" style="width:100%;background-color:#ffffff;border-color:#ffffff;"><div class="container"><div class="row mx-0 my-2 text-center align-center justify-center"><!----> <!----></div> <!----> <div class="row mx-0 my-2"><div class="pa-0 col-sm-4 offset-sm-2 col-10 offset-2"><a href="https://agirpourlatransition.ademe.fr/conditions-generales-dutilisation">Conditions d'utilisation</a></div><div class="pa-0 col-sm-4 offset-sm-2 col-10 offset-2"><a href="https://www.ademe.fr/">Site institutionnel</a></div><div class="pa-0 col-sm-4 offset-sm-2 col-10 offset-2"><a href="https://www.ademe.fr/content/contacter">Nous contacter</a></div><div class="pa-0 col-sm-4 offset-sm-2 col-10 offset-2"><a href="https://agirpourlatransition.ademe.fr/"> Agir pour la transition écologique</a></div><div class="pa-0 col-sm-4 offset-sm-2 col-10 offset-2"><a href="https://twitter.com/ademe">Twitter</a></div><div class="pa-0 col-sm-4 offset-sm-2 col-10 offset-2"><a href="/privacy-policy">
+        Politique de confidentialité
+      </a></div></div> <!----> <!----></div> <hr role="separator" aria-orientation="horizontal" class="v-divider theme--light"> <div class="container text-center py-1"><span>©2026 — </span><strong><a href="https://koumoul.com">Koumoul</a></strong></div></div></footer></div></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,_,$,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao,ap,aq,ar,as,at,au,av,aw,ax,ay,az,aA,aB,aC,aD,aE,aF,aG,aH,aI,aJ,aK,aL,aM,aN,aO,aP,aQ,aR,aS,aT,aU,aV,aW,aX,aY,aZ,a_,a$,ba,bb,bc,bd,be,bf,bg,bh,bi,bj,bk,bl,bm,bn,bo,bp,bq,br,bs,bt,bu,bv,bw,bx,by,bz,bA,bB,bC,bD,bE,bF,bG,bH,bI,bJ,bK,bL,bM,bN,bO,bP,bQ,bR,bS,bT,bU,bV,bW,bX,bY,bZ,b_,b$,ca,cb,cc,cd,ce,cf,cg,ch,ci,cj,ck,cl,cm,cn,co,cp,cq,cr,cs,ct,cu,cv,cw,cx,cy,cz,cA,cB,cC,cD,cE,cF,cG,cH,cI,cJ,cK,cL,cM,cN,cO,cP,cQ,cR,cS,cT,cU,cV,cW,cX,cY,cZ,c_,c$,da,db,dc,dd,de,df,dg,dh,di,dj,dk,dl,dm,dn,do0,dp,dq,dr,ds,dt,du,dv,dw,dx,dy,dz,dA,dB,dC,dD,dE,dF,dG,dH,dI,dJ,dK,dL,dM,dN,dO,dP,dQ,dR,dS,dT,dU,dV,dW,dX,dY,dZ,d_,d$,ea,eb,ec,ed,ee,ef,eg,eh,ei,ej,ek,el,em,en,eo,ep,eq,er,es,et,eu,ev,ew,ex,ey,ez,eA,eB,eC,eD,eE,eF,eG,eH,eI,eJ,eK,eL,eM,eN,eO,eP,eQ,eR,eS,eT,eU,eV,eW,eX,eY,eZ,e_,e$,fa,fb,fc,fd,fe,ff,fg,fh,fi,fj,fk,fl,fm,fn,fo,fp,fq,fr,fs,ft,fu,fv,fw,fx,fy,fz){ff.assets={logo:{name:"RF & ADEME.png",hash:"fit-2e58cae358.png"},home:{name:"Open data ADEME 1.png",hash:"fit-c9484ba6c9.png"},favicon:{name:"LogoAdeme2020_FR_RVB.jpg",hash:"fit-d7749fd80a.png"},font2:{name:"Marianne-ExtraBold.woff2",lastModified:"2025-10-13T13:53:30.087Z",size:41988,type:a,hash:"f927ded015"},font1:{name:"Marianne-Regular.woff2",lastModified:"2025-10-13T13:53:19.898Z",size:41328,type:a,hash:"eb551203b0"}};ff.title="Portail open data de l'ADEME";ff.authentication="optional";ff.homeImageAlwaysVisible=k;ff.metaDescription="Portail open data de l'ADEME. Accès aux jeux de données et aux visualisations des données de l'ADEME; agence de la transition écologique.";ff.themeColor="#0D47A2";ff.buttonOptions=["alwaysUnderline","hoverUnderline"];ff.infoCardBackgroundColor="lightGrey";ff.infoCardOptions=[];ff.actionCardBackgroundColor=ae;ff.actionCardOptions=["hoverElevate",Z];ff.radius=q;ff.elevation=p;ff.backgroundColor=ae;ff.secondaryBackgroundColor="#AAA1A1";ff.secondaryColor=fg;ff.topicsBackgroundColor="individual";ff.actionCardHorizontalOptions=[Z,"flat","hoverColorTitle","hoverColorBorder"];ff.actionCardHorizontalBackgroundColor=ae;ff.navLinkMode="link";ff.navLinkColor=fh;ff.tertiaryColor=fg;ff.headingsFont={source:fi,name:"font2",label:"Police 2 (Marianne-Bold.woff2)"};ff.bodyFont={source:fi,name:"font1",label:"Police 1 (Marianne-Regular.woff2)"};ff.appBarTransparency=f;ff.appBarBehavior="stick";ff.appBarColor=ae;ff.appBarActiveOptions=["slider","color"];ff.appBarFluid=f;ff.appBarFontColorPrimary=k;ff.appBarAdditionalLinks=[];ff.website=fj;ff.titleColor=fk;ff.headerColor="page";ff.headerNoTitle=k;ff.useHtmlTitle=k;ff.headerLogo2="https:\u002F\u002Fcellule-strategie-numerique-adem.gitbook.io\u002F~gitbook\u002Fimage?url=https:%2F%2F4251515518-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F2jK8JaUieA84hk2TJR3v%252Fuploads%252FjiBdH9uzuChCqRrgYFTU%252FLogo%2520Fabrique%2520-%2520small.jpg%3Falt=media%26token=50c7bfac-218c-4947-8dec-13efab2749c3&width=768&dpr=1&quality=100&sign=4aab3d5169efc1409f0e3aa8ad197f26b472b5c5bdf2d4a28515a21abca1a87d";ff.headerHide=f;ff.footerColor="#FFFFFF";ff.footerLinks=[{type:af,href:"https:\u002F\u002Fagirpourlatransition.ademe.fr\u002Fconditions-generales-dutilisation",title:"Conditions d'utilisation"},{type:af,href:fj,title:"Site institutionnel"},{type:af,href:"https:\u002F\u002Fwww.ademe.fr\u002Fcontent\u002Fcontacter",title:"Nous contacter"},{type:af,title:" Agir pour la transition écologique",href:"https:\u002F\u002Fagirpourlatransition.ademe.fr\u002F"},{type:af,title:"Twitter",href:"https:\u002F\u002Ftwitter.com\u002Fademe"}];ff.footerImportantLinks=[];ff.footerExtraLogos=[];ff.footerLinksMode="columns";ff.footerCopyrightAsLogo=k;ff.footerSocial=f;ff.footerBackgroundImage=C;ff.footerSitemap=k;ff.footerPrivacyPolicy=f;ff.homeImageAsBanner=k;ff.description="\u003Cp\u003EÉtablissement public à caractère industriel et commercial, placé sous la tutelle conjointe des ministères en charge de la Transition écologique et solidaire et de l’Enseignement supérieur et de la Recherche, l’ADEME participe à la mise en œuvre des politiques publiques dans les domaines de l’environnement, de l’énergie et du développement durable.\u003C\u002Fp\u003E\n\u003Cp\u003EPour répondre aux obligations réglementaires (Loi pour une République numérique) mais également pour accompagner la Transition écologique, l’Agence a décidé de mettre à disposition des entreprises, des collectivités locales, des pouvoirs publics et du grand public, ses données afin de leur permettre de progresser dans leur démarche environnementale et de démultiplier les actions en faveur de la Transition écologique.\u003C\u002Fp\u003E\n\u003Cp\u003ELes données de prospective \"Transition(s) 2050\" sont accessibles sur le portail \u003Ca href=\"https:\u002F\u002Fdata-transitions2050.ademe.fr\"\u003Edata-transitions2050.ademe.fr\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n";ff.showKpis=f;ff.homeDatasets={type:fl,size:p,cardLayout:ag};ff.homeApplications={type:fl,size:p,cardLayout:ag};ff.showTwitterTimeline=f;ff.kpiBackgroundColor=ae;ff.kpiOptions=[Z,"shaped"];ff.homeImageHidden=k;ff.homeSearchPosition=eq;ff.homeTopicsPosition=eq;ff.homeShowSearch=k;ff.homeShowTopics=f;ff.homeTopicsOptions=[Z,fm,fn];ff.homeSearchOptions=[Z,fm];ff.homeLinksOptions=[Z,fn];ff.homeLinks=[];ff.homeShowLinks=k;ff.showLastNews=k;ff.homeLinksPosition=eq;ff.showEvents=k;ff.homeTemplate={type:er};ff.datasetThumbnailContain=k;ff.datasetsPage={type:fo};ff.datasetsDefaultSort=fp;ff.datasetsCardLayout=ag;ff.datasetThumbnailApplication=k;ff.datasetMetaLayout="columnsLeftLarger";ff.datasetActionsDisplay=fq;ff.datasetsOwnerFilter={type:C};ff.datasetHideDepartment=f;ff.applicationsPage={type:fo};ff.applicationsCardLayout=ag;ff.applicationsDirectNavigation=k;ff.applicationActionsDisplay=fq;ff.applicationsDefaultSort=fp;ff.applicationHideDepartment=f;ff.externalReusesPage={type:C};ff.usesPage={type:C};ff.usesManagement={type:"managers"};ff.usesCardLayout=ag;ff.newsPage={type:C};ff.eventsPage={type:C};ff.contactEmail="cdo@ademe.fr";ff.contactFooterColor=fk;ff.networks=["twitter","linkedin","reddit","facebook","whatsapp"];ff.personalNavigationColor=fh;ff.personalAccountPages=[];ff.personnalHidePages=[];ff.analytics={type:C};ff.updatedAt="2025-10-13T13:57:39.535Z";ff.owner={type:ao,id:ap,name:ah};fr._id="efWMeL1ZP";fu[0]="organization:mMqHP1AmF";fx[0]={_id:"6798f3516715e6fed00ad18d",updated:{date:"2025-03-20T16:58:35.041Z"},navigation:{type:fy,position:ak},template:fz,title:"Info DPE",id:"dpe"};fx[1]={_id:"6717558f1adfd05460cc16b2",updated:{date:"2024-11-05T14:53:01.669Z"},navigation:{type:fy,position:ak},template:fz,title:"FAQ",id:"faq"};return {layout:er,data:[{}],fetch:{"0":{},"1":{isMobileOnly:k,dataset:{title:"DPE Logements existants (depuis juillet 2021)",isVirtual:f,virtual:{children:["hql3tmgt8jw2q0ecc9jdp57-"],filters:[{key:"dpe_desactive",values:["0"]}]},owner:{type:ao,id:ap,name:ah},schema:[{key:_,"x-originalName":_,type:c,description:a,"x-group":n,"x-cardinality":7492927,label:_,title:a,"x-capabilities":{},"x-refersTo":aq,"x-concept":{id:aq,title:"Numéro de DPE",primary:f}},{key:ar,"x-originalName":ar,type:c,format:$,title:a,icon:"mdi-calendar",dateFormat:aa,description:"\u003Cp\u003EDate de dernière modification d'une donnée concernant le DPE. A utiliser pour mettre en place une alimentation incrémentale.\u003C\u002Fp\u003E","x-group":n,"x-cardinality":68,label:ar,"x-capabilities":{}},{key:as,"x-originalName":as,type:c,format:$,dateFormat:aa,description:a,"x-group":n,"x-cardinality":1738,label:as,title:a,"x-capabilities":{}},{key:at,"x-originalName":at,type:c,format:$,dateFormat:aa,description:a,"x-group":n,"x-cardinality":1706,label:at,title:a,"x-capabilities":{}},{key:au,"x-originalName":au,type:c,format:$,dateFormat:aa,description:a,"x-group":n,"x-cardinality":1704,label:au,title:a,"x-capabilities":{}},{key:av,"x-originalName":av,type:c,format:$,dateFormat:aa,description:a,"x-group":n,"x-cardinality":1705,label:av,title:a,"x-capabilities":{}},{key:aw,"x-originalName":aw,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":n,"x-cardinality":1291721,label:aw},{key:ax,"x-originalName":ax,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":n,"x-cardinality":161363,label:ax},{key:"id_rnb",title:a,type:c,"x-capabilities":{},description:a,"x-cardinality":2598724,"x-group":n},{key:"provenance_id_rnb",title:a,type:c,"x-capabilities":{},description:a,"x-cardinality":t,"x-group":n,enum:["Reprise RNB","Logiciel"]},{key:ay,"x-originalName":ay,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":n,"x-cardinality":34481,label:ay},{key:az,"x-originalName":az,type:c,description:a,"x-group":n,"x-cardinality":72333,label:az,title:a,"x-capabilities":{}},{key:aA,"x-originalName":aA,type:c,description:a,"x-group":n,"x-cardinality":u,label:aA,title:a,"x-capabilities":{},enum:["DPE 3CL 2021 méthode logement"]},{key:aB,"x-originalName":aB,type:b,description:a,"x-group":n,"x-cardinality":ai,label:aB,title:a,"x-capabilities":{},enum:[2.4,2.3,2.2,2.1,2.5,2.6,u,t,1.1]},{key:aC,"x-originalName":aC,type:c,description:a,"x-group":n,"x-cardinality":es,label:aC,title:a,"x-capabilities":{},enum:["dpe appartement individuel","dpe maison individuelle","dpe appartement généré à partir des données DPE immeuble","dpe immeuble collectif","dpe issu d'une étude thermique réglementaire RT2012 bâtiment : appartement","dpe issu d'une étude thermique réglementaire RT2012 bâtiment : immeuble"]},{key:aD,"x-originalName":aD,type:c,description:a,"x-group":et,"x-cardinality":aj,label:aD,title:a,"x-capabilities":{},enum:[eu,ev,ew,ex,ey,ez,eA]},{key:aE,"x-originalName":aE,type:c,description:a,"x-group":et,"x-cardinality":aj,label:aE,title:a,"x-capabilities":{},enum:[eu,ey,ev,eA,ew,ex,ez]},{key:aF,"x-originalName":aF,type:c,description:a,"x-group":o,"x-cardinality":p,label:aF,title:a,"x-capabilities":{},enum:["appartement","maison","immeuble"]},{key:aG,"x-originalName":aG,type:m,title:a,icon:d,"x-group":o,"x-cardinality":578,description:a,label:aG,"x-capabilities":{}},{key:aH,"x-originalName":aH,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":o,"x-cardinality":ak,description:a,label:aH,enum:["1948-1974","avant 1948","1989-2000","2006-2012","2013-2021","1978-1982","1983-1988","1975-1977","2001-2005","après 2021"]},{key:aI,"x-originalName":aI,type:c,description:a,"x-group":o,"x-cardinality":p,label:aI,title:a,"x-capabilities":{},enum:[eB,eC,eD]},{key:aJ,"x-originalName":aJ,type:c,description:a,"x-group":o,"x-cardinality":p,label:aJ,title:a,"x-capabilities":{},enum:[eB,eC,eD]},{key:aK,"x-originalName":aK,type:b,description:a,"x-group":o,"x-cardinality":597,label:aK,title:a,"x-capabilities":{}},{key:aL,"x-originalName":aL,type:m,description:a,"x-group":o,"x-cardinality":946,label:aL,title:a,"x-capabilities":{}},{key:aM,"x-originalName":aM,type:m,title:a,icon:d,description:a,"x-group":o,"x-cardinality":77,label:aM,"x-capabilities":{}},{key:aN,"x-originalName":aN,type:m,description:a,"x-group":o,"x-cardinality":196,label:aN,title:a,"x-capabilities":{}},{key:aO,"x-originalName":aO,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":o,"x-cardinality":aj,label:aO},{key:aP,"x-originalName":aP,type:m,title:a,icon:d,description:a,"x-group":o,"x-cardinality":t,label:aP,"x-capabilities":{},enum:[u,r]},{key:aQ,"x-originalName":aQ,type:b,description:a,"x-group":o,"x-cardinality":83680,label:aQ,title:a,"x-capabilities":{}},{key:aR,"x-originalName":aR,type:b,description:a,"x-group":o,"x-cardinality":7861,label:aR,title:a,"x-capabilities":{}},{key:aS,"x-originalName":aS,type:b,title:a,icon:d,description:a,"x-group":o,"x-cardinality":1870,label:aS,"x-capabilities":{}},{key:aT,"x-originalName":aT,type:c,description:a,"x-group":o,"x-cardinality":q,label:aT,title:a,"x-capabilities":{},enum:["Moyenne","Lourde","Légère","Très lourde"]},{key:aU,"x-originalName":aU,type:c,description:a,"x-group":l,"x-cardinality":q,label:aU,title:a,"x-capabilities":{},enum:["inférieur à 400m","400-800m","supérieur à 800m",D]},{key:aV,"x-originalName":aV,type:c,description:a,title:a,"x-group":l,"x-cardinality":ai,label:aV,"x-capabilities":{},enum:["H1a","H1c","H3","H1b","H2b","H2c","H2a","H2d",D]},{key:aW,"x-originalName":aW,type:c,description:a,"x-group":l,"x-cardinality":1030812,label:aW,title:a,"x-capabilities":{}},{key:aX,"x-originalName":aX,type:c,description:a,"x-group":l,"x-cardinality":14517,label:aX,title:a,"x-capabilities":{}},{key:aY,"x-originalName":aY,type:c,description:a,"x-group":l,"x-cardinality":428354,label:aY,title:a,"x-capabilities":{}},{key:aZ,"x-originalName":aZ,type:c,description:a,"x-group":l,"x-cardinality":37136,label:aZ,title:a,"x-capabilities":{}},{key:a_,"x-originalName":a_,type:c,description:a,"x-refersTo":"http:\u002F\u002Fschema.org\u002FpostalCode","x-concept":{id:"postalCode",title:"Code postal",primary:f},"x-group":l,"x-cardinality":6171,label:a_,title:a,"x-capabilities":{}},{key:a$,"x-originalName":a$,type:c,description:a,"x-refersTo":"http:\u002F\u002Frdf.insee.fr\u002Fdef\u002Fgeo#codeCommune","x-concept":{id:"codeCommune",title:"Code commune",primary:f},"x-group":l,"x-cardinality":35326,label:a$,title:a,"x-capabilities":{}},{key:ba,"x-originalName":ba,type:c,description:a,"x-refersTo":"http:\u002F\u002Frdf.insee.fr\u002Fdef\u002Fgeo#codeDepartement","x-concept":{id:"codeDepartement",title:"Code département",primary:f},"x-group":l,"x-cardinality":104,label:ba,title:a,"x-capabilities":{}},{key:bb,"x-originalName":bb,type:c,description:a,"x-refersTo":"http:\u002F\u002Frdf.insee.fr\u002Fdef\u002Fgeo#codeRegion","x-concept":{id:"codeRegion",title:"Code région",primary:f},"x-group":l,"x-cardinality":19,label:bb,title:a,"x-capabilities":{},enum:["11","84","75","76","44","32","93","52","28","53","24","27","94","02","04","01","03","06","00"]},{key:bc,"x-originalName":bc,type:c,description:a,"x-group":l,"x-cardinality":1715432,label:bc,title:a,"x-capabilities":{}},{key:bd,"x-originalName":bd,type:b,description:a,"x-refersTo":"http:\u002F\u002Fdata.ign.fr\u002Fdef\u002Fgeometrie#coordX","x-concept":{id:"coordX",title:"Coordonnée X",primary:f},"x-group":l,"x-cardinality":4685255,label:bd,title:a,"x-capabilities":{}},{key:be,"x-originalName":be,type:b,description:a,"x-refersTo":"http:\u002F\u002Fdata.ign.fr\u002Fdef\u002Fgeometrie#coordY","x-concept":{id:"coordY",title:"Coordonnée Y (projection libre)",primary:f},"x-group":l,"x-cardinality":4711010,label:be,title:a,"x-capabilities":{}},{key:bf,"x-originalName":bf,type:b,description:a,"x-group":l,"x-cardinality":97,label:bf,title:a,"x-capabilities":{}},{key:bg,"x-originalName":bg,type:c,description:a,"x-group":l,"x-cardinality":t,label:bg,title:a,"x-capabilities":{},enum:["adresse géocodée ban à l'adresse","adresse non géocodée ban car aucune correspondance trouvée"]},{key:al,"x-originalName":al,type:c,description:a,"x-group":l,"x-cardinality":1410958,label:al,title:"numero_voie_brut","x-capabilities":{}},{key:"adresse_complete_brut",title:al,type:c,"x-capabilities":{},description:a,"x-cardinality":845831,"x-group":l},{key:bh,"x-originalName":bh,type:c,description:a,"x-group":l,"x-cardinality":146595,label:bh,title:a,"x-capabilities":{}},{key:bi,"x-originalName":bi,type:m,description:a,"x-group":l,"x-cardinality":9366,label:bi,title:a,"x-capabilities":{}},{key:bj,"x-originalName":bj,type:m,description:a,"x-group":l,"x-cardinality":102,label:bj,title:a,"x-capabilities":{}},{key:bk,"x-originalName":bk,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":l,"x-cardinality":p,label:bk},{key:bl,"x-originalName":bl,type:c,description:a,"x-group":l,"x-cardinality":265600,label:bl,title:a,"x-capabilities":{}},{key:bm,"x-originalName":bm,type:c,description:a,"x-group":l,"x-cardinality":2244842,label:bm,title:a,"x-capabilities":{}},{key:bn,"x-originalName":bn,type:c,description:a,"x-group":l,"x-cardinality":1218295,label:bn,title:a,"x-capabilities":{}},{key:bo,"x-originalName":bo,type:c,description:a,"x-group":E,"x-cardinality":p,label:bo,title:a,"x-capabilities":{},enum:["moyen","insuffisant","bon"]},{key:bp,"x-originalName":bp,type:m,title:a,icon:d,description:a,"x-group":E,"x-cardinality":t,label:bp,"x-capabilities":{},enum:[u,r]},{key:bq,"x-originalName":bq,type:m,title:a,icon:d,description:a,"x-group":E,"x-cardinality":t,label:bq,"x-capabilities":{},enum:[u,r]},{key:br,"x-originalName":br,type:m,title:a,icon:d,description:a,"x-group":E,"x-cardinality":t,label:br,"x-capabilities":{},enum:[r,u]},{key:bs,"x-originalName":bs,type:m,title:a,icon:d,description:a,"x-group":E,"x-cardinality":t,label:bs,"x-capabilities":{},enum:[r,u]},{key:bt,"x-originalName":bt,type:m,title:a,icon:d,description:a,"x-group":E,"x-cardinality":t,label:bt,"x-capabilities":{},enum:[u,r]},{key:bu,"x-originalName":bu,type:b,description:a,"x-group":v,"x-cardinality":84295,label:bu,title:a,"x-capabilities":{}},{key:bv,"x-originalName":bv,type:b,description:a,"x-group":v,"x-cardinality":25666,label:bv,title:a,"x-capabilities":{}},{key:bw,"x-originalName":bw,type:b,description:a,"x-group":v,"x-cardinality":37815,label:bw,title:a,"x-capabilities":{}},{key:bx,"x-originalName":bx,type:b,description:a,"x-group":v,"x-cardinality":13866,label:bx,title:a,"x-capabilities":{}},{key:by,"x-originalName":by,type:b,description:a,"x-group":v,"x-cardinality":9772,label:by,title:a,"x-capabilities":{}},{key:bz,"x-originalName":bz,type:b,description:a,"x-group":v,"x-cardinality":4681,label:bz,title:a,"x-capabilities":{}},{key:bA,"x-originalName":bA,type:b,description:a,"x-group":v,"x-cardinality":27297,label:bA,title:a,"x-capabilities":{}},{key:bB,"x-originalName":bB,type:b,description:a,"x-group":v,"x-cardinality":38260,label:bB,title:a,"x-capabilities":{}},{key:bC,"x-originalName":bC,type:c,description:a,"x-group":w,"x-cardinality":q,label:bC,title:a,"x-capabilities":{},enum:[F,G,H,I]},{key:bD,"x-originalName":bD,type:c,description:a,"x-group":w,"x-cardinality":q,label:bD,title:a,"x-capabilities":{},enum:[F,G,I,H]},{key:bE,"x-originalName":bE,type:c,description:a,"x-group":w,"x-cardinality":q,label:bE,title:a,"x-capabilities":{}},{key:bF,"x-originalName":bF,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":w,"x-cardinality":q,description:a,label:bF,enum:[I,F,H,G]},{key:bG,"x-originalName":bG,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":w,"x-cardinality":q,description:a,label:bG,enum:[F,I,G,H]},{key:"qualite_isolation_plancher_bas","x-originalName":eE,type:c,description:a,"x-group":w,"x-cardinality":q,label:eE,title:a,"x-capabilities":{},enum:[F,I,G,H]},{key:bH,"x-originalName":bH,type:c,description:a,"x-group":w,"x-cardinality":q,label:bH,title:a,"x-capabilities":{},enum:[H,G,I,F]},{key:bI,"x-originalName":bI,type:b,description:a,"x-group":w,"x-cardinality":820,label:bI,title:a,"x-capabilities":{}},{key:bJ,"x-originalName":bJ,type:b,description:a,"x-group":x,"x-cardinality":659190,label:bJ,title:a,"x-capabilities":{}},{key:bK,"x-originalName":bK,type:b,description:a,"x-group":x,"x-cardinality":192502,label:bK,title:a,"x-capabilities":{}},{key:bL,"x-originalName":bL,type:b,description:a,"x-group":x,"x-cardinality":107911,label:bL,title:a,"x-capabilities":{}},{key:bM,"x-originalName":bM,type:b,title:a,icon:d,"x-group":x,"x-cardinality":990279,description:a,label:bM,"x-capabilities":{}},{key:bN,"x-originalName":bN,type:b,title:a,icon:d,"x-group":x,"x-cardinality":185712,description:a,label:bN,"x-capabilities":{}},{key:bO,"x-originalName":bO,type:b,title:a,icon:d,"x-group":x,"x-cardinality":3652320,description:a,label:bO,"x-capabilities":{}},{key:bP,"x-originalName":bP,type:b,title:a,icon:d,"x-group":x,"x-cardinality":467186,description:a,label:bP,"x-capabilities":{}},{key:bQ,"x-originalName":bQ,type:b,description:a,"x-group":y,"x-cardinality":868590,label:bQ,title:a,"x-capabilities":{}},{key:bR,"x-originalName":bR,type:b,description:a,title:a,"x-group":y,"x-cardinality":11997,label:bR,"x-capabilities":{}},{key:bS,"x-originalName":bS,type:b,description:a,"x-group":y,"x-cardinality":819781,label:bS,title:a,"x-capabilities":{}},{key:bT,"x-originalName":bT,type:b,description:a,"x-group":y,"x-cardinality":333403,label:bT,title:a,"x-capabilities":{}},{key:bU,"x-originalName":bU,type:b,description:a,"x-group":y,"x-cardinality":44587,label:bU,title:a,"x-capabilities":{}},{key:bV,"x-originalName":bV,type:b,description:a,"x-group":y,"x-cardinality":94475,label:bV,title:a,"x-capabilities":{}},{key:bW,"x-originalName":bW,type:b,description:a,"x-group":y,"x-cardinality":210796,label:bW,title:a,"x-capabilities":{}},{key:"conso_5_usages_ef","x-originalName":eF,type:b,description:a,"x-group":z,"x-cardinality":804168,label:eF,title:a,"x-capabilities":{}},{key:"conso_5_usages_par_m2_ef","x-originalName":eG,type:b,description:a,"x-group":z,"x-cardinality":9622,label:eG,title:a,"x-capabilities":{}},{key:bX,"x-originalName":bX,type:b,description:a,"x-group":z,"x-cardinality":733019,label:bX,title:a,"x-capabilities":{}},{key:bY,"x-originalName":bY,type:b,description:a,"x-group":z,"x-cardinality":284514,label:bY,title:a,"x-capabilities":{}},{key:bZ,"x-originalName":bZ,type:b,description:a,"x-group":z,"x-cardinality":26021,label:bZ,title:a,"x-capabilities":{}},{key:b_,"x-originalName":b_,type:b,description:a,"x-group":z,"x-cardinality":61457,label:b_,title:a,"x-capabilities":{}},{key:b$,"x-originalName":b$,type:b,description:a,"x-group":z,"x-cardinality":127707,label:b$,title:a,"x-capabilities":{}},{key:ca,"x-originalName":ca,type:b,description:a,"x-group":A,"x-cardinality":323662,label:ca,title:a,"x-capabilities":{}},{key:"emission_ges_5_usages_par_m2","x-originalName":eH,type:b,description:a,"x-group":A,"x-cardinality":2985,label:eH,title:a,"x-capabilities":{}},{key:cb,"x-originalName":cb,type:b,description:a,"x-group":A,"x-cardinality":292005,label:cb,title:a,"x-capabilities":{}},{key:cc,"x-originalName":cc,type:b,description:a,"x-group":A,"x-cardinality":131927,label:cc,title:a,"x-capabilities":{}},{key:cd,"x-originalName":cd,type:b,description:a,"x-group":A,"x-cardinality":4191,label:cd,title:a,"x-capabilities":{}},{key:ce,"x-originalName":ce,type:b,description:a,"x-group":A,"x-cardinality":11441,label:ce,title:a,"x-capabilities":{}},{key:cf,"x-originalName":cf,type:b,description:a,"x-group":A,"x-cardinality":25689,label:cf,title:a,"x-capabilities":{}},{key:cg,"x-originalName":cg,type:c,description:a,"x-group":g,"x-cardinality":ab,label:cg,title:a,"x-capabilities":{},enum:[J,K,L,M,N,O,P,Q,R,S,ac,T,U,V]},{key:"conso_5_usages_ef_energie_n1","x-originalName":eI,type:b,description:a,"x-group":g,"x-cardinality":750257,label:eI,title:a,"x-capabilities":{}},{key:ch,"x-originalName":ch,type:b,description:a,"x-group":g,"x-cardinality":706037,label:ch,title:a,"x-capabilities":{}},{key:ci,"x-originalName":ci,type:b,description:a,"x-group":g,"x-cardinality":267411,label:ci,title:a,"x-capabilities":{}},{key:cj,"x-originalName":cj,type:b,description:a,"x-group":g,"x-cardinality":222186,label:cj,title:a,"x-capabilities":{}},{key:ck,"x-originalName":ck,type:b,description:a,"x-group":g,"x-cardinality":190348,label:ck,title:a,"x-capabilities":{}},{key:cl,"x-originalName":cl,type:b,description:a,"x-group":g,"x-cardinality":103198,label:cl,title:a,"x-capabilities":{}},{key:cm,"x-originalName":cm,type:b,description:a,"x-group":g,"x-cardinality":310908,label:cm,title:a,"x-capabilities":{}},{key:cn,"x-originalName":cn,type:b,description:a,"x-group":g,"x-cardinality":286883,label:cn,title:a,"x-capabilities":{}},{key:co,"x-originalName":co,type:b,description:a,"x-group":g,"x-cardinality":124666,label:co,title:a,"x-capabilities":{}},{key:cp,"x-originalName":cp,type:c,description:a,"x-group":g,"x-cardinality":ab,label:cp,title:a,"x-capabilities":{},enum:[K,N,J,O,M,L,P,ac,Q,R,U,S,T,V]},{key:"conso_5_usages_ef_energie_n2","x-originalName":eJ,type:b,description:a,"x-group":g,title:a,"x-cardinality":310493,label:eJ,"x-capabilities":{}},{key:cq,"x-originalName":cq,type:b,description:a,"x-group":g,"x-cardinality":253384,label:cq,title:a,"x-capabilities":{}},{key:cr,"x-originalName":cr,type:b,title:a,icon:d,"x-group":g,description:a,"x-cardinality":96130,label:cr,"x-capabilities":{}},{key:cs,"x-originalName":cs,type:b,description:a,"x-group":g,"x-cardinality":95173,label:cs,title:a,"x-capabilities":{}},{key:ct,"x-originalName":ct,type:b,description:a,"x-group":g,"x-cardinality":54164,label:ct,title:a,"x-capabilities":{}},{key:cu,"x-originalName":cu,type:b,description:a,"x-group":g,"x-cardinality":40446,label:cu,title:a,"x-capabilities":{}},{key:cv,"x-originalName":cv,type:b,description:a,"x-group":g,"x-cardinality":98579,label:cv,title:a,"x-capabilities":{}},{key:cw,"x-originalName":cw,type:b,description:a,"x-group":g,"x-cardinality":85155,label:cw,title:a,"x-capabilities":{}},{key:cx,"x-originalName":cx,type:b,description:a,"x-group":g,"x-cardinality":35600,label:cx,title:a,"x-capabilities":{}},{key:cy,"x-originalName":cy,type:c,description:a,"x-group":g,"x-cardinality":ab,label:cy,title:a,"x-capabilities":{}},{key:cz,"x-originalName":cz,type:b,description:a,"x-group":g,"x-cardinality":89430,label:cz,title:a,"x-capabilities":{}},{key:cA,"x-originalName":cA,type:b,title:a,icon:d,description:a,"x-group":g,"x-cardinality":69443,label:cA,"x-capabilities":{}},{key:cB,"x-originalName":cB,type:b,title:a,icon:d,description:a,"x-group":g,"x-cardinality":36203,label:cB,"x-capabilities":{}},{key:"cout_total_5_usages_energie_n3","x-originalName":eK,type:b,description:a,"x-group":g,"x-cardinality":30839,label:eK,title:a,"x-capabilities":{}},{key:cC,"x-originalName":cC,type:b,title:a,icon:d,description:a,"x-group":g,"x-cardinality":22262,label:cC,"x-capabilities":{}},{key:cD,"x-originalName":cD,type:b,title:a,icon:d,description:a,"x-group":g,"x-cardinality":9949,label:cD,"x-capabilities":{}},{key:cE,"x-originalName":cE,type:b,description:a,"x-group":g,"x-cardinality":29917,label:cE,title:a,"x-capabilities":{}},{key:cF,"x-originalName":cF,type:b,title:a,icon:d,description:a,"x-group":g,"x-cardinality":25138,label:cF,"x-capabilities":{}},{key:cG,"x-originalName":cG,type:b,title:a,icon:d,description:a,"x-group":g,"x-cardinality":11787,label:cG,"x-capabilities":{}},{key:cH,"x-originalName":cH,type:b,description:a,"x-group":W,"x-cardinality":241347,label:cH,title:a,"x-capabilities":{}},{key:cI,"x-originalName":cI,type:b,description:a,"x-group":W,"x-cardinality":194431,label:cI,title:a,"x-capabilities":{}},{key:cJ,"x-originalName":cJ,type:b,description:a,"x-group":W,"x-cardinality":114202,label:cJ,title:a,"x-capabilities":{}},{key:cK,"x-originalName":cK,type:b,description:a,"x-group":W,"x-cardinality":8020,label:cK,title:a,"x-capabilities":{}},{key:cL,"x-originalName":cL,type:b,description:a,"x-group":W,"x-cardinality":29954,label:cL,title:a,"x-capabilities":{}},{key:cM,"x-originalName":cM,type:b,description:a,"x-group":W,"x-cardinality":60582,label:cM,title:a,"x-capabilities":{}},{key:cN,"x-originalName":cN,type:c,description:a,"x-group":e,"x-cardinality":ab,label:cN,title:a,"x-capabilities":{},enum:[J,K,L,M,N,O,P,Q,R,S,ac,T,U,V]},{key:cO,"x-originalName":cO,type:c,description:a,"x-group":e,"x-cardinality":149,label:cO,title:a,"x-capabilities":{}},{key:cP,"x-originalName":cP,type:c,description:a,"x-group":e,"x-cardinality":q,label:cP,title:a,"x-capabilities":{},enum:[eL,eM,eN,"installation hybride collective-individuelle (chauffage base + appoint individuel ou convecteur bi-jonction)"]},{key:cQ,"x-originalName":cQ,type:c,description:a,"x-group":e,"x-cardinality":eO,label:cQ,title:a,"x-capabilities":{},enum:["Radiateur bitube avec robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","radiateur électrique NFC, NF** et NF***","Convecteur électrique NFC, NF** et NF***","Panneau rayonnant NFC, NF** et NF***","Radiateur bitube avec robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Radiateur bitube avec robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Radiateur bitube avec robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Radiateur bitube sans robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Poêle bois","Radiateur bitube sans robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Radiateur bitube sans robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","Plancher chauffant sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Radiateur électrique à accumulation","Radiateur bitube sans robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Plancher chauffant sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Soufflage d'air chaud (air soufflé) avec distribution par réseau aéraulique","Radiateur monotube avec robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Radiateur monotube sans robinet thermostatique sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Soufflage d'air chaud (air soufflé) avec distribution par fluide frigorigène","Plancher chauffant sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Autres émetteurs à effet joule","Radiateur monotube sans robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Radiateur monotube avec robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","Radiateur monotube avec robinet thermostatique sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Plancher chauffant sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","Plancher rayonnant électrique avec régulation terminale","Radiateur monotube sans robinet thermostatique sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","Radiateur monotube avec robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Radiateur monotube sans robinet thermostatique sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Soufflage d'air chaud sans réseau de distribution (ventiloconvecteur éléctrique)","Plancher rayonnant électrique sans régulation","Radiateur gaz à ventouse ou sur conduit de fumée","Autres équipements","Plafond rayonnant électrique avec régulation terminale","Convecteur bi-jonction","Poêle fioul","Poêle charbon","Plafond chauffant sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Plafond chauffant sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Plafond rayonnant électrique sans régulation","Radiateur avec distribution par fluide frigorigène (à détente directe)","Plafond chauffant sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","Soufflage d'air chaud (Ventiloconvecteur) sur réseau individuel eau chaude basse ou moyenne température(inf 65°C)","Plancher chauffant avec distribution par fluide frigorigène (plancher chauffant à détente directe)","Soufflage d'air chaud (Ventiloconvecteur) sur réseau collectif eau chaude basse ou moyenne température(inf 65°C)","Poêle GPL","Plafond chauffant sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Soufflage d'air chaud (Ventiloconvecteur) sur réseau collectif eau chaude haute température(sup ou egal 65°C)","Soufflage d'air chaud (Ventiloconvecteur) sur réseau individuel eau chaude haute température(sup ou egal 65°C)","Plafond chauffant avec distribution par fluide frigorigène (Plafond chauffant à détente directe)"]},{key:cR,"x-originalName":cR,type:c,description:a,"x-group":e,"x-cardinality":X,label:cR,title:a,"x-capabilities":{},enum:["Installation de chauffage simple","Installation de chauffage avec insert ou poêle bois en appoint","Installation de chauffage collectif avec Base + appoint","Installation de chauffage avec en appoint un insert ou poêle bois et un chauffage électrique dans la salle de bain (différent du chauffage principal)","Installation de chauffage avec chaudière en relève de PAC","Installation de chauffage par insert, poêle bois (ou biomasse) avec un chauffage électrique dans la salle de bain","Installation de chauffage avec une chaudière ou une PAC en relève d’une chaudière bois","Installation de chauffage avec chauffage solaire","Convecteurs bi-jonction","Installation de chauffage avec chaudière en relève de PAC avec insert ou poêle bois en appoint","Installation de chauffage avec chauffage solaire et insert ou poêle bois en appoint"]},{key:cS,"x-originalName":cS,type:c,description:a,"x-group":e,"x-cardinality":103996,label:cS,title:a,"x-capabilities":{}},{key:cT,"x-originalName":cT,type:b,description:a,"x-group":e,"x-cardinality":636024,label:cT,title:"conso_chauffage_ef_installation_chauffage_n1","x-capabilities":{}},{key:cU,"x-originalName":cU,type:b,description:a,"x-group":e,"x-cardinality":34711,label:cU,title:a,"x-capabilities":{}},{key:cV,"x-originalName":cV,type:b,title:a,icon:d,"x-group":e,"x-cardinality":X,description:a,label:cV,"x-capabilities":{}},{key:cW,"x-originalName":cW,type:b,title:a,icon:d,"x-group":e,"x-cardinality":X,description:a,label:cW,"x-capabilities":{}},{key:cX,"x-originalName":cX,type:c,description:a,"x-group":e,"x-cardinality":160,label:cX,title:a,"x-capabilities":{}},{key:cY,"x-originalName":cY,type:c,description:a,"x-group":e,"x-cardinality":13,label:cY,title:a,"x-capabilities":{},enum:[J,K,L,M,N,O,P,Q,R,S,T,U,V]},{key:cZ,"x-originalName":cZ,type:c,description:a,"x-group":e,"x-cardinality":q,label:cZ,title:a,"x-capabilities":{},enum:[eP,eQ,eR,D]},{key:c_,"x-originalName":c_,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":e,"x-cardinality":2174,description:a,label:c_},{key:c$,"x-originalName":c$,type:b,title:"conso_chauffage_ef_generateur_n1_installation_n1",icon:d,description:a,"x-group":e,"x-cardinality":608175,label:c$,"x-capabilities":{}},{key:da,"x-originalName":da,type:c,description:a,"x-group":e,"x-cardinality":eS,label:da,title:a,"x-capabilities":{}},{key:db,"x-originalName":db,type:c,description:a,"x-group":e,"x-cardinality":dc,label:db,title:a,"x-capabilities":{}},{key:dd,"x-originalName":dd,type:c,description:a,"x-group":e,"x-cardinality":q,label:dd,title:a,"x-capabilities":{}},{key:de,"x-originalName":de,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":e,"x-cardinality":632,description:a,label:de},{key:df,"x-originalName":df,type:b,title:"conso_chauffage_ef_generateur_n2_installation_n1",icon:d,description:a,"x-group":e,"x-cardinality":177790,label:df,"x-capabilities":{}},{key:dg,"x-originalName":dg,type:c,description:a,"x-group":e,"x-cardinality":q,label:dg,title:a,"x-capabilities":{}},{key:dh,"x-originalName":dh,type:c,description:a,"x-group":e,"x-cardinality":eO,label:dh,title:a,"x-capabilities":{}},{key:di,"x-originalName":di,type:c,description:a,"x-group":e,"x-cardinality":X,label:di,title:a,"x-capabilities":{}},{key:dj,"x-originalName":dj,type:c,description:a,"x-group":e,"x-cardinality":28927,label:dj,title:a,"x-capabilities":{}},{key:dk,"x-originalName":dk,type:b,description:a,"x-group":e,"x-cardinality":184969,label:dk,title:"conso_chauffage_ef_installation_chauffage_n2","x-capabilities":{}},{key:dl,"x-originalName":dl,type:b,description:a,"x-group":e,"x-cardinality":10458,label:dl,title:a,"x-capabilities":{}},{key:dm,"x-originalName":dm,type:b,title:a,icon:d,"x-group":e,"x-cardinality":ai,description:a,label:dm,"x-capabilities":{}},{key:dn,"x-originalName":dn,type:b,title:a,icon:d,"x-group":e,"x-cardinality":ai,description:a,label:dn,"x-capabilities":{}},{key:do0,"x-originalName":do0,type:c,description:a,"x-group":e,"x-cardinality":eS,label:do0,title:a,"x-capabilities":{}},{key:dp,"x-originalName":dp,type:c,description:a,"x-group":e,"x-cardinality":dc,label:dp,title:a,"x-capabilities":{}},{key:dq,"x-originalName":dq,type:c,description:a,"x-group":e,"x-cardinality":q,label:dq,title:a,"x-capabilities":{}},{key:dr,"x-originalName":dr,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":e,"x-cardinality":769,description:a,label:dr},{key:ds,"x-originalName":ds,type:b,title:"conso_chauffage_ef_generateur_n1_installation_n2",icon:d,description:a,"x-group":e,"x-cardinality":167206,label:ds,"x-capabilities":{}},{key:dt,"x-originalName":dt,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":e,"x-cardinality":116,label:dt},{key:du,"x-originalName":du,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":e,"x-cardinality":dc,label:du},{key:dv,"x-originalName":dv,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":e,"x-cardinality":p,label:dv},{key:dw,"x-originalName":dw,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":e,"x-cardinality":266,description:a,label:dw},{key:dx,"x-originalName":dx,type:b,title:"conso_chauffage_ef_generateur_n2_installation_n2",icon:d,description:a,"x-group":e,"x-cardinality":31763,label:dx,"x-capabilities":{}},{key:dy,"x-originalName":dy,type:c,description:a,"x-group":h,"x-cardinality":eT,label:dy,title:a,"x-capabilities":{},enum:[K,J,L,D,M,P,O,Q,N,R,U,T,ac,S,V]},{key:dz,"x-originalName":dz,type:c,description:a,"x-group":h,"x-cardinality":118,label:dz,title:a,"x-capabilities":{}},{key:dA,"x-originalName":dA,type:b,description:a,"x-group":h,"x-cardinality":r,label:dA,title:a,"x-capabilities":{}},{key:dB,"x-originalName":dB,type:b,description:a,"x-group":h,"x-cardinality":r,label:dB,title:a,"x-capabilities":{}},{key:dC,"x-originalName":dC,type:c,description:a,"x-group":h,"x-cardinality":p,label:dC,title:a,"x-capabilities":{},enum:[eL,eM,eN]},{key:dD,"x-originalName":dD,type:c,description:a,"x-group":h,"x-cardinality":p,label:dD,title:a,"x-capabilities":{},enum:["Un seul système d'ECS sans solaire","Un seul système d'ECS avec solaire","Deux systèmes d'ECS dans une maison ou un appartement"]},{key:dE,"x-originalName":dE,type:c,description:a,"x-group":h,"x-cardinality":63472,label:dE,title:a,"x-capabilities":{}},{key:dF,"x-originalName":dF,type:b,description:a,"x-group":h,"x-cardinality":182468,label:dF,title:a,"x-capabilities":{}},{key:"nombre_logements_desservis_par_installation_ecs_n1","x-originalName":eU,type:b,title:a,icon:d,"x-group":h,"x-cardinality":1057,label:eU,description:a,"x-capabilities":{}},{key:dG,"x-originalName":dG,type:b,description:a,"x-group":h,"x-cardinality":32049,label:dG,title:a,"x-capabilities":{}},{key:dH,"x-originalName":dH,type:c,description:a,"x-group":h,"x-cardinality":eV,label:dH,title:a,"x-capabilities":{},enum:[D,"ECS solaire seule sup 5 ans","ECS solaire seule inf 5 ans","Chauffage + ECS solaire","Chauffage solaire (seul ou combiné)"]},{key:dI,"x-originalName":dI,type:b,title:a,icon:d,description:a,"x-group":h,"x-cardinality":102541,label:dI,"x-capabilities":{}},{key:dJ,"x-originalName":dJ,type:b,title:a,icon:d,"x-group":h,"x-cardinality":X,description:a,label:dJ,"x-capabilities":{}},{key:dK,"x-originalName":dK,type:b,title:a,icon:d,"x-group":h,"x-cardinality":X,description:a,label:dK,"x-capabilities":{}},{key:dL,"x-originalName":dL,type:c,description:a,"x-group":h,"x-cardinality":130,label:dL,title:a,"x-capabilities":{}},{key:dM,"x-originalName":dM,type:c,description:a,"x-group":h,"x-cardinality":ab,label:dM,title:a,"x-capabilities":{},enum:[K,J,L,M,P,O,Q,N,R,U,T,ac,S,V]},{key:dN,"x-originalName":dN,type:c,description:a,"x-group":h,"x-cardinality":p,label:dN,title:a,"x-capabilities":{},enum:[eR,eQ,eP]},{key:dO,"x-originalName":dO,type:c,description:a,"x-group":h,"x-cardinality":980,label:dO,title:a,"x-capabilities":{}},{key:dP,"x-originalName":dP,type:b,title:a,icon:d,"x-group":h,"x-cardinality":6869,description:a,label:dP,"x-capabilities":{}},{key:dQ,"x-originalName":dQ,type:b,title:a,icon:d,description:a,"x-group":h,"x-cardinality":67,label:dQ,"x-capabilities":{}},{key:dR,"x-originalName":dR,type:b,title:a,icon:d,description:a,"x-group":h,"x-cardinality":178397,label:dR,"x-capabilities":{}},{key:dS,"x-originalName":dS,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":h,"x-cardinality":p,description:a,label:dS},{key:dT,"x-originalName":dT,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":h,"x-cardinality":27,label:dT},{key:dU,"x-originalName":dU,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":h,"x-cardinality":aj,label:dU},{key:dV,"x-originalName":dV,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":h,"x-cardinality":t,label:dV},{key:dW,"x-originalName":dW,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":h,"x-cardinality":eT,label:dW},{key:dX,"x-originalName":dX,type:b,title:a,icon:d,description:a,"x-group":h,"x-cardinality":33,label:dX,"x-capabilities":{}},{key:dY,"x-originalName":dY,type:b,title:a,icon:d,description:a,"x-group":h,"x-cardinality":t,label:dY,"x-capabilities":{}},{key:dZ,"x-originalName":dZ,type:b,title:a,icon:d,description:a,"x-group":h,"x-cardinality":45,label:dZ,"x-capabilities":{}},{key:d_,"x-originalName":d_,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":h,"x-cardinality":p,description:a,label:d_},{key:d$,"x-originalName":d$,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":ea,"x-cardinality":39,label:d$,enum:["Ventilation par ouverture des fenêtres","VMC SF Hygro B après 2012","VMC SF Auto réglable de 1982 à 2000","VMC SF Auto réglable après 2012","VMC SF Auto réglable de 2001 à 2012","Ventilation naturelle par conduit","VMC SF Auto réglable avant 1982","Ventilation par entrées d'air hautes et basses","VMC SF Hygro A après 2012","VMC SF Hygro B de 2001 à 2012","VMC SF Hygro A de 2001 à 2012","VMC SF Hygro A avant 2001","Ventilation mécanique sur conduit existant avant 2013","VMC SF Hygro B avant  2001","Ventilation naturelle par conduit avec entrées d'air hygro","Ventilation mécanique sur conduit existant à partir de 2013","VMC Basse pression Hygro B","VMC Basse pression Hygro A","VMC SF Gaz avant  2001","VMC SF Gaz de 2001 à 2012","VMC SF Gaz après 2012","VMC Basse pression Auto-réglable","VMC DF individuelle avec échangeur à partir de 2013","Ventilation hybride après 2012","Ventilation hybride avant  2001","Ventilation hybride de 2001 à 2012","VMC DF individuelle avec échangeur avant 2013","VMC DF collective avec échangeur avant 2013","Ventilation hybride avec entrées d'air hygro après 2012","VMC DF collective avec échangeur à partir de 2013","VMC DF sans échangeur avant 2013","VMC DF sans échangeur après 2012","Ventilation hybride avec entrées d'air hygro de 2001 à 2012","Ventilation hybride avec entrées d'air hygro avant  2001",D,"Puits climatique avec échangeur avant 2013","Puits climatique sans échangeur avant 2013","Puits climatique avec échangeur à partir de 2013","Puits climatique sans échangeur à partir de 2013"]},{key:eb,"x-originalName":eb,type:b,title:a,icon:d,description:a,"x-group":ea,"x-cardinality":38354,label:eb,"x-capabilities":{}},{key:ec,"x-originalName":ec,type:m,title:a,icon:d,description:a,"x-group":ea,"x-cardinality":t,label:ec,"x-capabilities":{},enum:[r,u]},{key:ed,"x-originalName":ed,type:c,description:a,"x-group":Y,"x-cardinality":23,label:ed,title:a,"x-capabilities":{}},{key:ee,"x-originalName":ee,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":Y,"x-cardinality":es,description:a,label:ee},{key:ef,"x-originalName":ef,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,"x-group":Y,"x-cardinality":p,description:a,label:ef},{key:eg,"x-originalName":eg,type:c,description:a,"x-group":Y,"x-cardinality":7486,label:eg,title:a,"x-capabilities":{}},{key:eh,"x-originalName":eh,type:b,description:a,"x-group":Y,"x-cardinality":6978,label:eh,title:a,"x-capabilities":{}},{key:ei,"x-originalName":ei,type:b,description:a,"x-group":Y,"x-cardinality":24373,label:ei,title:a,"x-capabilities":{}},{key:ej,"x-originalName":ej,type:c,description:a,"x-group":B,"x-cardinality":ak,label:ej,title:a,"x-capabilities":{},enum:["réseau de chaleur ou de froid vertueux","pompe à chaleur","chauffage au bois","Il existe plusieurs descriptifs ENR","panneaux solaires thermiques","chauffe-eau thermodynamique","panneaux solaires photovoltaïques","géothermie","cogénération","éolienne"]},{key:ek,"x-originalName":ek,type:c,title:a,icon:i,"x-capabilities":{},maxLength:j,description:a,"x-group":B,"x-cardinality":8,label:ek},{key:el,"x-originalName":el,type:m,title:a,icon:d,description:a,"x-group":B,"x-cardinality":t,label:el,"x-capabilities":{}},{key:em,"x-originalName":em,type:b,title:a,icon:d,description:a,"x-group":B,"x-cardinality":944,label:em,"x-capabilities":{}},{key:en,"x-originalName":en,type:m,title:a,icon:d,description:a,"x-group":B,"x-cardinality":201,label:en,"x-capabilities":{}},{key:eo,"x-originalName":eo,type:b,description:a,"x-group":B,"x-cardinality":60653,label:eo,title:a,"x-capabilities":{}},{key:ep,"x-originalName":ep,type:b,title:a,icon:d,description:a,"x-group":B,"x-cardinality":725,label:ep,"x-capabilities":{}},{"x-calculated":f,key:"_geopoint",type:c,title:"Coordonnée géographique",description:"\u003Cp\u003ECentroïde au format \"lat,lon\"\u003C\u002Fp\u003E","x-refersTo":"http:\u002F\u002Fwww.w3.org\u002F2003\u002F01\u002Fgeo\u002Fwgs84_pos#lat_long","x-concept":{id:"latLon",title:"Latitude \u002F Longitude",primary:f}},{"x-calculated":f,key:"_id",type:c,format:"uri-reference",title:"Identifiant",description:"\u003Cp\u003EIdentifiant unique parmi toutes les lignes du jeu de données\u003C\u002Fp\u003E"},{"x-calculated":f,key:"_i",type:m,title:"Numéro de ligne",description:"\u003Cp\u003EIndice de la ligne dans le fichier d'origine\u003C\u002Fp\u003E"},{"x-calculated":f,key:"_rand",type:m,title:"Nombre aléatoire",description:"\u003Cp\u003EUn nombre aléatoire associé à la ligne qui permet d'obtenir un tri aléatoire par exemple\u003C\u002Fp\u003E"}],updatedAt:"2026-02-18T14:00:32.903Z",createdAt:"2025-02-03T15:46:12.346Z",updatedBy:{id:eW,name:eX},createdBy:{id:eW,name:eX},status:"finalized",id:"meg-83tjwtg8dyz4vv7h1dqe",slug:"dpe03existant",storage:{size:eY,dataFiles:[],indexed:{size:r,parts:["master-data"]},attachments:{size:r,count:r},metadataAttachments:{size:eY,count:eV},masterData:{size:r,count:r}},bbox:[-5.131043046712875,-5.983856348320842,9.556231945753098,64.04822062700987],count:14220911,dataUpdatedAt:"2026-03-04T20:30:06.033Z",dataUpdatedBy:{id:"apiKey:QsU6yCHgyXq4fj-SOIvK-",name:"Processings"},finalizedAt:"2026-03-04T21:22:02.258Z",topics:[{title:eZ,color:"#1E88E5FF",id:"BR8GjsXga"}],frequency:"weekly",publicationSites:["data-fair-portals:efWMeL1ZP"],requestedPublicationSites:[],description:"\u003Ch3\u003ELe Diagnostic de Performance Energétique (DPE)\u003C\u002Fh3\u003E\n\u003Cp\u003E\u003C\u002Fp\u003E\nLe Diagnostic de Performance Energétique (DPE) renseigne sur la performance énergétique et environnementale d’un logement ou d’un bâtiment, en évaluant sa **consommation d’énergie** et son impact en matière d’**émissions de gaz à effet de serre**. Le contenu et les modalités d’établissement du DPE sont réglementés. Le DPE contient des informations sur les caractéristiques du bâtiment ou du logement (surface, orientation, murs, fenêtres, matériaux, etc.) ainsi que sur ses équipements (de chauffage, de production d’eau chaude sanitaire, de ventilation, etc.)\n\n\u003Cp\u003EPour les logements, le DPE a fait l’objet d’une réforme entrée en vigueur le 1er juillet 2021. Son objectif est de fiabiliser le DPE afin d’en faire le dispositif central dans la réglementation liée à la rénovation énergétique. \u003C\u002Fp\u003E\n\u003Cp\u003ELes principales évolutions sont :\u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003EGénéralisation de la méthode de calcul (3CL) à tous les logements \u003C\u002Fli\u003E\n\u003Cli\u003EPassage de 3 à 5 usages énergétiques (ajout des consommations d’éclairage et d’auxiliaire)\u003C\u002Fli\u003E\n\u003Cli\u003EIntégration d’un double-seuil prenant en compte les émissions de gaz à effet de serre dans l’étiquette DPE.\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Cp\u003E \u003Cimg src=\"https:\u002F\u002Ffiles.gitbook.com\u002Fv0\u002Fb\u002Fgitbook-x-prod.appspot.com\u002Fo\u002Fspaces%2F2jK8JaUieA84hk2TJR3v%2Fuploads%2FgSaolsvN9LI2Z2KhgVn2%2FClasses%20DPE%20small.jpg?alt=media&amp;token=2b7c9286-a147-4b8d-aef8-008f8d15627b\" alt=\"\" \u002F\u003E\u003C\u002Fp\u003E\n\u003Ch3\u003ELa collecte des DPE par l’Ademe\u003C\u002Fh3\u003E\n\u003Cp\u003EL’Ademe effectue la collecte des DPE depuis 2013 (\u003Ca href=\"https:\u002F\u002Fwww.legifrance.gouv.fr\u002Fjorf\u002Fid\u002FJORFTEXT000024317077\u002F\"\u003EDécret no 2011-807 du 5 juillet 2011 relatif à la transmission des DPE à l’ADEME\u003C\u002Fa\u003E). Dans le cadre de la réforme en vigueur depuis le 1er juillet 2021,l’Ademe a de nouveau été identifié comme responsable de la collecte des DPE (\u003Ca href=\"https:\u002F\u002Fwww.legifrance.gouv.fr\u002Floda\u002Fid\u002FJORFTEXT000043353381\u002F2022-03-17\u002F\"\u003EArticle 4 de l’arrêté du 31 mars 2021 relatif aux méthodes et procédures applicables au diagnostic de performance énergétique\u003C\u002Fa\u003E). Compte tenu de la nature des évolutions, un nouveau modèle de données a été établi.\u003C\u002Fp\u003E\n\u003Cp\u003EPour plus d’informations sur le DPE, nous vous invitons à consulter le nouvel observatoire DPE à l’adresse suivante : \u003Ca href=\"https:\u002F\u002Fobservatoire-dpe-audit.ademe.fr\u002Faccueil\"\u003Ehttps:\u002F\u002Fobservatoire-dpe-audit.ademe.fr\u002Faccueil\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\n\u003Cp\u003EVous y retrouverez diverses fonctionnalités dont :\u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003EUn outil statistique permettant d’obtenir des données générales sur les DPE, complémentaires à celles présentées ici \u003C\u002Fli\u003E\n\u003Cli\u003EUn accès à la vue tabulaire des données en Open data via votre espace personnel.\u003C\u002Fli\u003E\n\u003Cli\u003EUne FAQ\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Cp\u003E\u003C\u002Fp\u003E\n\n\u003Ch3\u003ELes outils à votre disposition\u003C\u002Fh3\u003E\n\u003Cp\u003ELes données à disposition ici concernent les \u003Cstrong\u003EDPE établis à partir du 1er juillet 2021 sur des logements existants\u003C\u002Fstrong\u003E.\u003C\u002Fp\u003E\n\u003Cp\u003ELes données des DPE établis avant le 1er juillet 2021 se trouvent dans les jeux de données « \u003Ca href=\"https:\u002F\u002Fdata.ademe.fr\u002Fdatasets\u002Fdpe-tertiaire\"\u003EDiagnostics de performance énergétique pour les bâtiments tertiaire\u003C\u002Fa\u003E » et « \u003Ca href=\"https:\u002F\u002Fdata.ademe.fr\u002Fdatasets\u002Fdpe-france\"\u003EDiagnostics de performance énergétique pour les logements par habitation\u003C\u002Fa\u003E ».\u003C\u002Fp\u003E\n\u003Cp\u003ESur cette page, vous pouvez accéder aux données sous des formats différents. Chaque format est destiné à un usage.\u003C\u002Fp\u003E\n\u003Cp\u003EEn complément, une documentation d’utilisation des différentes fonctionnalités accessibles depuis cette page (API, vue tabulaire, etc.) est disponible \u003Ca href=\"https:\u002F\u002Fdata-fair.github.io\u002F3\u002Fuser-guide-frontoffice\u002Fdatasetpage\u002F\"\u003Eici\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\n\u003Cp\u003ESi vous ne souhaitez pas accéder à l’ensemble des données, nous vous conseillons d’utiliser la vue tabulaire en cliquant sur le symbole \u003Cimg src=\"https:\u002F\u002Ffiles.gitbook.com\u002Fv0\u002Fb\u002Fgitbook-x-prod.appspot.com\u002Fo\u002Fspaces%2F2jK8JaUieA84hk2TJR3v%2Fuploads%2FN7NuxhDKztBACmPKIqu0%2FVue%20tabulaire%202%20-%20small.jpg?alt=media&amp;token=dafdde89-d2e0-40e5-8a85-a3708e70528e\" alt=\"\" \u002F\u003E. Cette vue vous permet d’une part d’appliquer des filtres pour sélectionner les DPE à afficher et d’autre part de choisir les colonnes que vous souhaitez afficher. Vous pouvez ensuite extraire ces données sous divers formats dont le format Excel. \u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cstrong\u003EPour les publics avertis, nous proposons\u003C\u002Fstrong\u003E : \u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003E\u003Ca href=\"https:\u002F\u002Fopendata.ademe.fr\u002Fdump_dpev2_prod_fdld.sql.gz\"\u003EUn accès en téléchargement aux données sous forme d’une base de données\u003C\u002Fa\u003E (\u003Cem\u003E\u003Cstrong\u003Eattention à la taille de la base de données - Autorisez votre navigateur à télécharger depuis un site non sécurisé\u003C\u002Fstrong\u003E\u003C\u002Fem\u003E). PostgreSQL 12.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-39), 64-bit.\u003C\u002Fli\u003E\n\u003Cli\u003EUn accès par API, disponible dans la zone de pictogrammes à droite de l’écran. \u003Ca href=\"https:\u002F\u002Fwww.loom.com\u002Fshare\u002F411a6993752f407fb1e30b0552e1ccd3\"\u003EVoir la vidéo démo d’utilisation de l’API\u003C\u002Fa\u003E.\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Ch3\u003EDocuments d’accompagnements\u003C\u002Fh3\u003E\n\u003Cp\u003EPour vous aider à l’exploitation des données DPE, vous trouverez dans les pièces jointes disponibles en cliquant sur le symbole  \u003Cimg src=\"https:\u002F\u002Ffiles.gitbook.com\u002Fv0\u002Fb\u002Fgitbook-x-prod.appspot.com\u002Fo\u002Fspaces%2F2jK8JaUieA84hk2TJR3v%2Fuploads%2FNxZEaVUwQQtYwwLINuty%2FPi%C3%A8ce%20jointe%20-%20small.jpg?alt=media&amp;token=c0488667-5d48-4a5e-a434-3033a80577a0\" alt=\"\" \u002F\u003E différents documents d’accompagnement :\u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003EUn dictionnaire de données précisant à quoi correspond chaque champ \u003C\u002Fli\u003E\n\u003Cli\u003EUne note technique précisant les informations essentielles à connaître afin d’interpréter correctement les données fournies. \u003C\u002Fli\u003E\n\u003Cli\u003EUne description des contrôles de cohérence effectuées sur les données des DPE\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Cp\u003E\n\n\u003C\u002Fp\u003E\u003Cp\u003EA destination des utilisateurs de la base de données :\u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003EUn dictionnaire de données plus technique \u003C\u002Fli\u003E\n\u003Cli\u003ELes tables de valeurs et d’énumérateurs utilisées dans la base de données.\u003C\u002Fli\u003E\n\u003Cli\u003ELe modèle de données.\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Cp\u003E\u003C\u002Fp\u003E\u003Cp\u003E\n\n\u003C\u002Fp\u003E\u003Ch3\u003EPrécautions d’interprétation des données\u003C\u002Fh3\u003E\n\u003Cp\u003EAttention : les données fournies ici sont les données brutes de l’observatoire DPE qui contient l’ensemble des DPE effectués par les diagnostiqueurs immobiliers. \u003C\u002Fp\u003E\n\u003Cp\u003ELeur interprétation doit être faite avec précaution. En effet, le DPE est obligatoire seulement pour une vente, une location ou à l'achèvement de toute nouvelle construction. Ainsi, tous les biens ne sont pas dotés d'un DPE. A ce titre, la base de données DPE ne couvre pas l'ensemble du parc immobilier et elle n’en est pas représentative. \u003C\u002Fp\u003E\n\u003Cp\u003EPour estimer la performance énergétique et environnementale de l'ensemble du parc français et la distribution nationale des classes DPE, un travail de redressement des données doit être fait. Il nécessite l’utilisation de la base de données DPE mais aussi l’utilisation d’autres bases de données comme par exemple, le répertoire de logements de l'Insee « Fidéli » ou encore les distributions d'énergies principales de chauffage des résidences principales estimées par le recensement de la population.\u003C\u002Fp\u003E\n\u003Ch3\u003EAutres informations sur les données fournies\u003C\u002Fh3\u003E\n\u003Cul\u003E\n\u003Cli\u003ELes données mises à disposition sont les données brutes saisies par les diagnostiqueurs. L’Ademe n’effectue aucune reprise de données. Dans ce cadre, l’ADEME ne peut en aucun cas être tenue responsable de la qualité des données qui lui sont transmises.\u003C\u002Fli\u003E\n\u003Cli\u003EContrairement aux données envoyées sur l’ancien observatoire, les données font désormais l’objet de contrôles de cohérence. En cas de non-conformité, le DPE est rejeté si le contrôle est bloquant. Pour plus d’informations, nous vous invitons à consulter le document en pièce jointe décrivant les contrôles de cohérence en vigueur\u003Cp\u003E\u003C\u002Fp\u003E\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E",extras:{applications:[{updatedAt:"2025-10-01T10:04:55.022Z",id:e_,slug:e$}]},masterData:{standardSchema:{},virtualDatasets:{active:k},singleSearchs:[],bulkSearchs:[{input:[{type:"equals",property:{key:_,title:_,"x-refersTo":aq}}],filters:[],title:"Identifiant DPE",id:"identifiant-dpe"}]},publications:[],attachments:[{type:ad,includeInCatalogPublications:k,title:"Journal des évolutions du jeu de données",name:"DPE-Journal des évolutions-Existant.pdf",size:83945,mimetype:"application\u002Fpdf",updatedAt:"2026-01-29T09:12:02.000Z",description:a,url:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fdatasets\u002Fmeg-83tjwtg8dyz4vv7h1dqe\u002Fmetadata-attachments\u002FDPE-Journal des évolutions-Existant.pdf"},{type:ad,includeInCatalogPublications:k,title:"DPE - Dictionnaire de données du DUMP",description:"\u003Cp\u003E\u003Cstrong\u003EDPE\u003C\u002Fstrong\u003E - Dictionnaire de données du DUMP\u003C\u002Fp\u003E",name:"DPE_dictionnaire_de_données_DUMP.xlsx",size:57025,mimetype:am,updatedAt:"2025-09-08T08:52:01.706Z",url:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fdatasets\u002Fmeg-83tjwtg8dyz4vv7h1dqe\u002Fmetadata-attachments\u002FDPE_dictionnaire_de_données_DUMP.xlsx"},{type:ad,includeInCatalogPublications:k,title:"DPE - Dictionnaire de données des jeux de données",description:"\u003Cp\u003E\u003Cstrong\u003EDPE\u003C\u002Fstrong\u003E - Dictionnaire de données des jeux de données\u003C\u002Fp\u003E",name:"DPE_dictionnaire_de_données_JDD.xlsx",size:26121,mimetype:am,updatedAt:"2025-09-08T08:52:01.714Z",url:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fdatasets\u002Fmeg-83tjwtg8dyz4vv7h1dqe\u002Fmetadata-attachments\u002FDPE_dictionnaire_de_données_JDD.xlsx"},{type:ad,includeInCatalogPublications:k,title:"DPE - Enumérateurs des tables",description:"\u003Cp\u003E\u003Cstrong\u003EDPE\u003C\u002Fstrong\u003E - Enumérateurs des tables\u003C\u002Fp\u003E",name:"DPE_enum_tables.xlsx",size:264175,mimetype:am,updatedAt:"2025-09-08T08:52:01.724Z",url:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fdatasets\u002Fmeg-83tjwtg8dyz4vv7h1dqe\u002Fmetadata-attachments\u002FDPE_enum_tables.xlsx"},{type:ad,includeInCatalogPublications:k,title:"DPE - Tables de valeurs",description:"\u003Cp\u003E\u003Cstrong\u003EDPE\u003C\u002Fstrong\u003E - Tables de valeurs\u003C\u002Fp\u003E",name:"DPE_valeur_tables.xlsx",size:583302,mimetype:am,updatedAt:"2025-09-08T08:52:01.739Z",url:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fdatasets\u002Fmeg-83tjwtg8dyz4vv7h1dqe\u002Fmetadata-attachments\u002FDPE_valeur_tables.xlsx"}],license:{href:"https:\u002F\u002Fwww.etalab.gouv.fr\u002Flicence-ouverte-open-licence",title:"Licence Ouverte \u002F Open Licence version 2.0"},origin:ah,keywords:[eZ],spatial:"France entière",projection:{title:"RGF93 \u002F Lambert-93 -- France",code:"EPSG:2154"},summary:"Le Diagnostic de Performance Energétique (DPE) renseigne sur la performance énergétique et environnementale d’un logement ou d’un bâtiment, en évaluant sa consommation d’énergie et son impact en matière d’émissions de gaz à effet de serre. Le contenu et les modalités d’établissement du DPE sont réglementés. Le DPE contient des informations sur les caractéristiques du bâtiment ou du logement (surface, orientation, murs, fenêtres, matériaux, etc.) ainsi que sur ses équipements (de chauffage, de production d’eau chaude sanitaire, de ventilation, etc.)\n\nPour les logements, le DPE a fait l’objet d’une réforme entrée en vigueur le 1er juillet 2021. Son objectif est de fiabiliser le DPE afin d’en faire le dispositif central dans la réglementation liée à la rénovation énergétique. \n\nCes données présentes dans ce jeu de données reflètent uniquement les logements ayant fait l’objet d’un DPE depuis juillet 2021. Elles ne couvrent pas l’intégralité du parc immobilier.\n",userPermissions:[fa,fb,"readSchema","readSafeSchema","readLines","getGeoAgg","getValuesAgg","getValues","getMetricAgg","getSimpleMetricsAgg","getWordsAgg","getMinAgg","getMaxAgg","downloadOriginalData","downloadFullData",fc,"realtime-transactions","readLine","readLineRevisions","readRevisions","bulkSearch","listDataFiles","downloadDataFile","downloadMetadataAttachment",fd,"getReadApiKey","readCompatODSRecords","readCompatODSExports"],public:f,visibility:fe,previews:[{id:"table",title:"Tableau",href:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fembed\u002Fdataset\u002Fdpe03existant\u002Ftable"},{id:"map",title:"Carte",href:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fembed\u002Fdataset\u002Fdpe03existant\u002Fmap"},{id:"map-bounds",title:"Enveloppe géographique",href:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fembed\u002Fdataset\u002Fdpe03existant\u002Fmap-bounds"}],href:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fdatasets\u002Fdpe03existant",page:"https:\u002F\u002Fdata.ademe.fr\u002Fdatasets\u002Fdpe03existant"},applications:{count:u,results:[{owner:{type:ao,id:ap,name:ah,department:"departement-batiment",departmentName:"Département Bâtiment"},url:"https:\u002F\u002Fkoumoul.com\u002Fapps\u002Fcarto-stats\u002F1.0\u002F",title:"DPE Logements existants (depuis juillet 2021) - Etiquettes DPE",id:e_,slug:e$,description:"\u003Cp\u003ECette carte présente les DPE des logements existants, \u003Cstrong\u003Edepuis le 1er juillet 2021\u003C\u002Fstrong\u003E, en fonction de leur classe énergétique.\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cstrong\u003EAVERTISSEMENT\u003C\u002Fstrong\u003E : les diagnostics de performance énergétique (DPE) sont transmis à l’ADEME à des fins d'études statistiques, d'évaluation et d'amélioration méthodologique en vertu de l’article L134-4-2 du code de la construction et de l’habitation.\nDans ce cadre, l’ADEME ne peut en aucun cas être tenue responsable de la qualité des données qui lui sont transmises sous la seule responsabilité du diagnostiqueur. \u003C\u002Fp\u003E\u003Cp\u003E\u003C\u002Fp\u003E\u003Cp\u003E\u003C\u002Fp\u003E",userPermissions:[fa,fb,"readConfig",fc,"readBaseApp","readCapture","readPrint",fd],public:f,visibility:fe,href:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapi\u002Fv1\u002Fapplications\u002Fdpe-logements-existants-depuis-juillet-2021-etiquettes-dpe",page:"https:\u002F\u002Fdata.ademe.fr\u002Fapplications\u002Fdpe-logements-existants-depuis-juillet-2021-etiquettes-dpe",exposedUrl:"https:\u002F\u002Fdata.ademe.fr\u002Fdata-fair\u002Fapp\u002Fdpe-logements-existants-depuis-juillet-2021-etiquettes-dpe"}]},uses:[]}},error:s,state:{config:ff,portal:fr,draft:k,initialQuery:fs,textDark:"#212121",breadcrumbs:s,publicUrl:an,publicBaseUrl:an,mainPublicUrl:ft,html:f,inPortal:f,concepts:s,userPartners:s,whiteLabelOwners:fu,childBreadcrumbsRouteName:s,childBreadcrumbItems:s,processingsBasePath:fv,notifyBasePath:fw,pageImages:{},navigation:{pages:fx,datasetsList:s,applicationsList:s,usesList:s,publicUrl:an,publicBaseUrl:an,mainPublicUrl:ft,processingsBasePath:fv,notifyBasePath:fw,initialQuery:fs,draft:k,portal:fr,html:f,inPortal:f,config:ff,whiteLabelOwners:fu},style:{},session:{user:s,initialized:f,directoryUrl:"https:\u002F\u002Fdata.ademe.fr\u002Fsimple-directory",logoutRedirectUrl:s,cookieName:"id_token",interval:10000,sameSite:s,activeAccountDetails:s,reloadAfterAccountChange:f},i18n:{routeParams:{}},pages:fx},serverRendered:f,routePath:"\u002Fdatasets\u002Fdpe03existant",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:s}}}}("","number","string","mdi-numeric","Chauffage",true,"Bilan par énergie","ECS","mdi-text-short",200,false,"Localisation","integer","Administratif","Caractéristiques bâtiment",3,4,0,null,2,1,"Déperdition","Isolation","Apport et besoin","Consommation en énergie primaire","Consommation en énergie finale","Emissions de GES","Energie Renouvelable","none","Non affecté","Confort d'été","insuffisante","bonne","moyenne","très bonne","Gaz naturel","Électricité","Réseau de Chauffage urbain","Fioul domestique","Bois – Bûches","Bois – Granulés (pellets) ou briquettes","GPL","Propane","Bois – Plaquettes forestières","Charbon","Bois – Plaquettes d’industrie","Butane","Réseau de Froid Urbain","Coûts",11,"Climatisation","outlined","numero_dpe","date","D\u002FM\u002FYYYY",14,"Électricité d'origine renouvelable utilisée dans le bâtiment","file","white","external","dense","ADEME",9,7,10,"adresse_brut","application\u002Fvnd.openxmlformats-officedocument.spreadsheetml.sheet","https:\u002F\u002Fdata.ademe.fr","organization","g1pKfMqaE","Numero_DPE","date_derniere_modification_dpe","date_visite_diagnostiqueur","date_etablissement_dpe","date_reception_dpe","date_fin_validite_dpe","numero_dpe_remplace","numero_dpe_immeuble_associe","numero_rpls_logement","numero_immatriculation_copropriete","modele_dpe","version_dpe","methode_application_dpe","etiquette_dpe","etiquette_ges","type_batiment","annee_construction","periode_construction","type_installation_chauffage","type_installation_ecs","hauteur_sous_plafond","nombre_appartement","nombre_niveau_immeuble","nombre_niveau_logement","typologie_logement","appartement_non_visite","surface_habitable_immeuble","surface_habitable_logement","surface_tertiaire_immeuble","classe_inertie_batiment","classe_altitude","zone_climatique","adresse_ban","numero_voie_ban","nom_rue_ban","nom_commune_ban","code_postal_ban","code_insee_ban","code_departement_ban","code_region_ban","identifiant_ban","coordonnee_cartographique_x_ban","coordonnee_cartographique_y_ban","score_ban","statut_geocodage","nom_commune_brut","code_postal_brut","numero_etage_appartement","position_logement_dans_immeuble","nom_residence","complement_adresse_batiment","complement_adresse_logement","indicateur_confort_ete","protection_solaire_exterieure","logement_traversant","presence_brasseur_air","inertie_lourde","isolation_toiture","deperditions_enveloppe","deperditions_ponts_thermiques","deperditions_murs","deperditions_planchers_hauts","deperditions_planchers_bas","deperditions_portes","deperditions_baies_vitrees","deperditions_renouvellement_air","qualite_isolation_enveloppe","qualite_isolation_murs","qualite_isolation_plancher_haut_comble_amenage","qualite_isolation_plancher_haut_comble_perdu","qualite_isolation_plancher_haut_toit_terrasse","qualite_isolation_menuiseries","ubat_w_par_m2_k","besoin_chauffage","besoin_ecs","besoin_refroidissement","apport_interne_saison_chauffe","apport_interne_saison_froide","apport_solaire_saison_chauffe","apport_solaire_saison_froide","conso_5_usages_ep","conso_5_usages_par_m2_ep","conso_chauffage_ep","conso_ecs_ep","conso_refroidissement_ep","conso_eclairage_ep","conso_auxiliaires_ep","conso_chauffage_ef","conso_ecs_ef","conso_refroidissement_ef","conso_eclairage_ef","conso_auxiliaires_ef","emission_ges_5_usages","emission_ges_chauffage","emission_ges_ecs","emission_ges_refroidissement","emission_ges_eclairage","emission_ges_auxiliaires","type_energie_n1","conso_chauffage_ef_energie_n1","conso_ecs_ef_energie_n1","cout_total_5_usages_energie_n1","cout_chauffage_energie_n1","cout_ecs_energie_n1","emission_ges_5_usages_energie_n1","emission_ges_chauffage_energie_n1","emission_ges_ecs_energie_n1","type_energie_n2","conso_chauffage_ef_energie_n2","conso_ecs_ef_energie_n2","cout_total_5_usages_energie_n2","cout_chauffage_energie_n2","cout_ecs_energie_n2","emission_ges_5_usages_energie_n2","emission_ges_chauffage_energie_n2","emission_ges_ecs_energie_n2","type_energie_n3","conso_5_usages_ef_energie_n3","conso_chauffage_ef_energie_n3","conso_ecs_ef_energie_n3","cout_chauffage_energie_n3","cout_ecs_energie_n3","emission_ges_5_usages_energie_n3","emission_ges_chauffage_energie_n3","emission_ges_ecs_energie_n3","cout_total_5_usages","cout_chauffage","cout_ecs","cout_refroidissement","cout_eclairage","cout_auxiliaires","type_energie_principale_chauffage","type_generateur_chauffage_principal","type_installation_chauffage_n1","type_emetteur_installation_chauffage_n1","configuration_installation_chauffage_n1","description_installation_chauffage_n1","conso_chauffage_installation_chauffage_n1","surface_chauffee_installation_chauffage_n1","facteur_couverture_solaire_installation_chauffage_n1","facteur_couverture_solaire_saisi_installation_chauffage_n1","type_generateur_n1_installation_n1","type_energie_generateur_n1_installation_n1","usage_generateur_n1_installation_n1","description_generateur_chauffage_n1_installation_n1","conso_chauffage_generateur_n1_installation_n1","type_generateur_n2_installation_n1","type_energie_generateur_n2_installation_n1",12,"usage_generateur_n2_installation_n1","description_generateur_chauffage_n2_installation_n1","conso_chauffage_generateur_n2_installation_n1","type_installation_chauffage_n2","type_emetteur_installation_chauffage_n2","configuration_installation_chauffage_n2","description_installation_chauffage_n2","conso_chauffage_installation_chauffage_n2","surface_chauffee_installation_chauffage_n2","facteur_couverture_solaire_installation_chauffage_n2","facteur_couverture_solaire_saisi_installation_chauffage_n2","type_generateur_n1_installation_n2","type_energie_generateur_n1_installation_n2","usage_generateur_n1_installation_n2","description_generateur_chauffage_n1_installation_n2","conso_chauffage_generateur_n1_installation_n2","type_generateur_n2_installation_n2","type_energie_generateur_n2_installation_n2","usage_generateur_n2_installation_n2","description_generateur_chauffage_n2_installation_n2","conso_chauffage_generateur_n2_installation_n2","type_energie_principale_ecs","type_generateur_chauffage_principal_ecs","besoin_ecs_batiment","besoin_ecs_logement","type_installation_ecs_n1","configuration_installation_ecs_n1","description_installation_ecs_n1","conso_ef_installation_ecs_n1","surface_habitable_desservie_par_installation_ecs_n1","type_installation_solaire_n1","production_ecs_solaire_installation_n1","facteur_couverture_solaire_n1","facteur_couverture_solaire_saisi_n1","type_generateur_n1_ecs_n1","type_energie_generateur_n1_ecs_n1","usage_generateur_n1_ecs_n1","description_generateur_n1_ecs_n1","volume_stockage_generateur_n1_ecs_n1","cop_generateur_n1_ecs_n1","conso_ef_generateur_n1_ecs_n1","date_installation_generateur_n1_ecs_n1","type_generateur_n2_ecs_n1","type_energie_generateur_n2_ecs_n1","usage_generateur_n2_ecs_n1","description_generateur_n2_ecs_n1","volume_stockage_generateur_n2_ecs_n1","cop_generateur_n2_ecs_n1","conso_ef_generateur_n2_ecs_n1","date_installation_generateur_n2_ecs_n1","type_ventilation","Ventilation","surface_ventilee","ventilation_posterieure_2012","type_generateur_froid","type_energie_climatisation","periode_installation_generateur_froid","description_generateur_froid","surface_climatisee","conso_refroidissement_annuel","categorie_enr","systeme_production_electricite_origine_renouvelable","presence_production_pv","surface_totale_capteurs_pv","nombre_module","production_electricite_pv_kwhep_par_an","electricite_pv_autoconsommee","belowKpi","default",6,"Bilan DPE","C","D","E","F","B","G","A","individuel","collectif","mixte (collectif-individuel)","qualite_isolation_plancher bas","conso_5 usages_ef","conso_5 usages_par_m2_ef","emission_ges_5_usages par_m2","conso_5 usages_ef_energie_n1","conso_5 usages_ef_energie_n2","cout_total_5_usages energie_n3","installation individuelle","installation collective","installation collective multi-bâtiment : modélisée comme un réseau de chaleur",50,"chauffage","chauffage + ecs","ecs",152,15," nombre_logements_desservis_par_installation_ecs_n1",5,"7_U4bQl8g","Patrice Pillet",1014568,"DPE","XfZKDy4EXqLk0lfR_NZwc","dpe-logements-existants-depuis-juillet-2021-etiquettes-dpe","list","readDescription","readApiDoc","downloadAttachment","public",{},"#1E88E5","primary","assets","https:\u002F\u002Fwww.ademe.fr\u002F","grey","lasts","rounded","elevate","infiniteScroll","createdAt","icon",{},{},"https:\u002F\u002Fkoumoul.com\u002Fdata-fair-portals",Array(1),"\u002Fprocessings","\u002Fevents",Array(2),"direct","blank"));</script><script src="/_nuxt/dfff57f4-5f684ed.js" defer></script><script src="/_nuxt/dfff57f4-cd1be1c.js" defer></script><script src="/_nuxt/1a9b5bc.js" defer></script><script src="/_nuxt/2a67dbe.js" defer></script><script src="/_nuxt/0601ae9.js" defer></script><script src="/_nuxt/513efd3.js" defer></script><script src="/_nuxt/dfff57f4-1763db0.js" defer></script><script src="/_nuxt/3bd87d5.js" defer></script><script src="/_nuxt/0515138.js" defer></script><script src="/_nuxt/dfff57f4-1ff6dc0.js" defer></script>
+  </body>
+</html>
